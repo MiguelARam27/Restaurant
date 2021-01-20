@@ -1,152 +1,47 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.landing')
 
-        <title>Laravel</title>
+@section('title', 'Page Title')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/app.css">
-    
-        <!-- Styles -->
-        <!-- <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+@section('sidebar')
+    @parent
 
-            .full-height {
-                height: 100vh;
-            }
+    <p>This is appended to the master sidebar.</p>
+@endsection
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style> -->
-    </head>
-    <body>
-    <section id="welcome">
-    <div class="welcome-menu">
-      <div class="logo">
-        <img src="https://webstockreview.net/images/clipart-restaurant-restaurant-logo-5.png">
-      </div>
-      <div class="menu">
-        <div class="menu-title">
-          Menu
-        </div>
-        <ul class="links">
-          <li>
-            <a href="#">Menu</a>
-          </li>
-          <li>
-            <a href="#">Waitlist</a>
-          </li>
-          <li>
-            <a href="#">Offers</a>
-          </li>
-          <li>
-            <a href="#">Giftcards</a>
-          </li>
-        </ul>
-      </div>
-      <div class="social-icons">
-        <a href="#">
-          <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      </div>
-      <div class="location">
-        <div class="address">
-          234 Main st,<br>
-          New York, New York 11747
-        </div>
-        <div class="phone-number">
-          <a href="tel:7182198652">718-219-8652</a>
-        </div>
-      </div>
+@section('content')
+<section id="information">
+  <div class="restaurant-image">
+    <img src="img/top-down.jpg">
+  </div>
+  <div class="info">
+    <h2>We Started From The Bottom In 1987</h2>
+    <div class="paragraphs">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad officia
+        fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
+        et
+        similique!Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad
+        officia
+        fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
+        et
+        similique!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad officia
+        fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
+        et
+        similique!Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad
+        officia
+        fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
+        et
+        similique!</p>
     </div>
-    <div class="welcome-jumbo">
-      <div class="status">NEW</div>
-      <h1>Billy Burger</h1>
-      <img src="/img/hamburger.png" class="burger-fries">
-    </div>
-  </section>
-  <section id="information">
-    <div class="restaurant-image">
-      <img src="img/top-down.jpg">
-    </div>
-    <div class="info">
-      <h2>We Started From The Bottom In 1987</h2>
-      <div class="paragraphs">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad officia
-          fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
-          et
-          similique!Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad
-          officia
-          fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
-          et
-          similique!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad officia
-          fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
-          et
-          similique!Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aliquid dolore, error minus ad
-          officia
-          fugit iusto repellat, explicabo reiciendis inventore mollitia non, libero perspiciatis dicta eius consequatur
-          et
-          similique!</p>
-      </div>
-      <a href="#" class="about-link">
-        <span>Learn more about restaurants</span>
-        <div class="circle-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
-      </a>
-    </div>
-  </section>
-  <section id="food-preview">
-    <h2>We have everything you need to kill your hunger</h2>
-    <div class="button-rounded">View Our Menu</div>
+    <a href="#" class="about-link">
+      <span>Learn more about restaurants</span>
+      <div class="circle-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    </a>
+  </div>
+</section>
+<section id="food-preview">
+  <h2>We have everything you need to kill your hunger</h2>
+  <div class="button-rounded">View Our Menu</div>
     <div class="container">
       <div class="left-btn">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -285,7 +180,5 @@
         </div>
       </div>
     </div>
-
-  </section>
-    </body>
-</html>
+</section>
+@endsection

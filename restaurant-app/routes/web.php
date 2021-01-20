@@ -14,5 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+Route::get('/app', function () {
+    return view('test');
+});
+Route::get('/menu', function () {
+    return view('menu/menu');
+});
+Route::get('/waitlist', function () {
+    return view('pages/waitlist');
+});
+Route::get('/contact', function () {
+    return view('pages/contact');
+});
+Route::get('/giftcards', function () {
+    return view('pages/giftcards');
+});
+Route::get('/offers', function () {
+    return view('pages/offers');
+});
+Route::get('/about', function () {
+    return view('pages/about');
+});
+Route::get('/waitlist', function () {
+    return view('pages/waitlist');
 });
