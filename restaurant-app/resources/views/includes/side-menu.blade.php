@@ -1,4 +1,4 @@
-<div class="welcome-menu">
+<div class="side-menu">
     <a href="/" class="logo">
         <img src="https://webstockreview.net/images/clipart-restaurant-restaurant-logo-5.png">
     </a>
@@ -7,18 +7,21 @@
         Menu
         </div>
         <ul class="links">
-        <li>
-            <a href="/menu">Menu</a>
-        </li>
-        <li>
-            <a href="/waitlist">Waitlist</a>
-        </li>
-        <li>
-            <a href="/offers">Offers</a>
-        </li>
-        <li>
-            <a href="/giftcards">Giftcards</a>
-        </li>
+            <li>
+                <a href="/menu">Menu</a>
+            </li>
+            <li>
+                <a href="/waitlist">Waitlist</a>
+            </li>
+            <li>
+                <a href="/offers">Offers</a>
+            </li>
+            <li>
+                <a href="/giftcards">Giftcards</a>
+            </li>
+            <li>
+                <a href="/about">About</a>
+            </li>
         </ul>
     </div>
     <div class="social-icons">
