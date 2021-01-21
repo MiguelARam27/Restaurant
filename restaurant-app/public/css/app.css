@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;
 
-300;400;500;700&display=swap);* {
+300;400;500;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap);* {
   box-sizing: border-box;
 }
 
@@ -190,16 +190,51 @@ table {
   font-size: 3rem;
   font-weight: 400;
   color: black;
-}
-
-.about-page .content-box {
-  background: white;
-  padding: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .about-page p {
-  font-size: 1.2rem;
-  line-height: 1.2;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 1.2rem;
+}
+
+.waitlist-page {
+  padding: 100px;
+}
+
+.waitlist-page h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+.waitlist-page p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2;
+  margin-bottom: 1.2rem;
+}
+
+.waitlist-page form .form-group .form-control {
+  padding: 10px;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.waitlist-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: black;
+}
+
+.waitlist-page form .form-group button[type=submit] {
+  background-color: #9c1b24;
+  border: none;
 }
 
 body {
@@ -210,6 +245,10 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
 }
 
 blockquote,
@@ -533,5 +572,10 @@ h2 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
+}
+
+.content-box {
+  background: white;
+  padding: 2rem;
 }
 

@@ -7,6 +7,7 @@
             <div class="col-md-6">
                 <h1>About Page</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem modi nisi incidunt delectus possimus ipsa sint recusandae iure dolorem officia. Harum velit repellat numquam reiciendis qui nemo! Reiciendis, porro necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, placeat incidunt officia quisquam, quae a sed voluptatem aut numquam neque illo eaque vitae similique excepturi quos inventore voluptatibus aliquam aspernatur?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa fuga autem eligendi cupiditate soluta iste. Consequuntur voluptatum minima commodi voluptas nobis in sequi et atque officiis, tempore placeat recusandae.</p>
             </div>
             <div class="col-md-6">
                 <img class="img-fluid" src="/img/restaurant.jpeg" alt="people eating" >
