@@ -1,5 +1,4 @@
-//
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import "reset";
 @import "home";
 @import "pages/about";
@@ -114,6 +113,29 @@ body {
                 }
             }
         }
+    }
+    #content-section {
+        max-width: calc(100vw - 350px);
+
+        background: #ed4852; /* Old browsers */
+        background: -moz-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* FF3.6-15 */
+        background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(
+            ellipse at center,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        overflow: hidden;
     }
 }
 #information {
