@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700:900&display=swap");
+.single-menu-page {
+    padding: 100px;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        color: #ed4852;
+        margin-bottom: 1rem;
+    }
+    .item {
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        h4,
+        .price {
+            font-size: 1.4rem;
+            color: black;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        h4 {
+            font-family: "Roboto", sans-serif;
+        }
+    }
+}
