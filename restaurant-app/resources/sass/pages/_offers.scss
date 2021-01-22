@@ -1,0 +1,35 @@
+.offers-page {
+    padding: 100px;
+    h1 {
+        font-size: 3rem;
+        font-weight: 400;
+        color: black;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        font-weight: 500;
+    }
+    form {
+        .form-group {
+            .form-control {
+                padding: 10px;
+                border: 2px solid #9c1b24;
+                font-size: 1.3rem;
+                height: auto;
+                box-sizing: border-box;
+            }
+            label {
+                font-weight: 700;
+                margin-bottom: 0.6rem;
+                color: black;
+            }
+            button[type="submit"] {
+                background-color: #9c1b24;
+                border: none;
+            }
+        }
+    }
+}

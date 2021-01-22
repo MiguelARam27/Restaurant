@@ -237,6 +237,42 @@ table {
   border: none;
 }
 
+.offers-page {
+  padding: 100px;
+}
+
+.offers-page h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+.offers-page p {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.offers-page form .form-group .form-control {
+  padding: 10px;
+  border: 2px solid #9c1b24;
+  font-size: 1.3rem;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.offers-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: black;
+}
+
+.offers-page form .form-group button[type=submit] {
+  background-color: #9c1b24;
+  border: none;
+}
+
 body {
   line-height: 1;
   background: white;
