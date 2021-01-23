@@ -159,10 +159,10 @@
                                     <a class="nav-link" href="/admintemp/pages/blank-page-header.html">Blank Page Header</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/admintemp/pages/login.html">Login</a>
+                                    <a class="nav-link" href="/login">Login</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/admintemp/pages/404-page.html">404 page</a>
+                                    <a class="nav-link" href="/register">Register</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admintemp/pages/sign-up.html">Sign up Page</a>
