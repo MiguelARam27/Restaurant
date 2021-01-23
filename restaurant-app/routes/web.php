@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin/dashboard');
 });
+Route::get('/admin/food-categories', function () {
+    return view('admin/food-categories/all');
+});
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
