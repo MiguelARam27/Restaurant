@@ -13,21 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
-Route::get('/admin/food-categories', function () {
-    return view('admin/food-categories/all');
-});
-Route::get('/admin/food-categories/create', function () {
-    return view('admin/food-categories/create');
-});
-Route::get('/admin/food-categories/{id}/edit', function () {
-    return view('admin/food-categories/edit');
-});
+
+//Admin
+Route::get('/admin', 'AdminController@dashboard');
+//Admin food category
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+
+//Admin auth
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
@@ -37,24 +31,12 @@ Route::get('/admin/register', function () {
 Route::get('/app', function () {
     return view('test');
 });
-Route::get('/menu', function () {
-    return view('menu/index');
-});
-Route::get('/menu/{slug}', function () {
-    return view('menu/single-menu');
-});
-Route::get('/waitlist', function () {
-    return view('pages/waitlist');
-});
-Route::get('/contact', function () {
-    return view('pages/contact');
-});
-Route::get('/offers', function () {
-    return view('pages/offers');
-});
-Route::get('/about', function () {
-    return view('pages/about');
-});
-Route::get('/waitlist', function () {
-    return view('pages/waitlist');
-});
+
+//Static Pages
+Route::get('/', 'StaticPagesController@home');
+Route::get('/about','StaticPagesController@about');
+Route::get('/waitlist','StaticPagesController@waitlist');
+Route::get('/contact','StaticPagesController@contact');
+Route::get('/offers','StaticPagesController@offers');
+Route::get('/menu','StaticPagesController@menu');
+Route::get('/menu/{slug}','StaticPagesController@singleMenu');
