@@ -33,13 +33,17 @@ Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@e
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+//Admin Customers
+Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+
 
 
 
 //Static Pages
 Route::get('/', 'StaticPagesController@home');
 Route::get('/about','StaticPagesController@about');
-Route::get('/waitlist','StaticPagesController@waitlist');
+Route::get('/reservations','StaticPagesController@reservations');
 Route::get('/contact','StaticPagesController@contact');
 Route::get('/offers','StaticPagesController@offers');
 Route::get('/menu','StaticPagesController@menu');

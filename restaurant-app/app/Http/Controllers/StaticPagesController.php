@@ -19,9 +19,10 @@ class StaticPagesController extends Controller
     public function offers(){
         return view('pages/offers');
     }
-    public function waitlist(){
-        return view('pages/waitlist');
+    public function reservations(){
+        return view('pages/reservations');
     }
+
     public function menu(){
         return view('menu//index');
     }

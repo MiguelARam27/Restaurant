@@ -8,8 +8,16 @@
                 <h1>Reserve your spot!</h1>
                 <form>
                         <div class="form-group">
-                          <label for="emailInput">Email address</label>
-                          <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com">
+                          <label for="firstNameInput">First Name</label>
+                          <input type="email" class="form-control" id="firstNameInput" name="firstName" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="lastNameInput">Last Name</label>
+                          <input type="email" class="form-control" id="lastNameInput" name="lastName" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="emailInput">Email</label>
+                          <input type="text" class="form-control" name="email" id="emailInput" placeholder="Enter Your Email">
                         </div>
                         <div class="form-group">
                           <label for="phoneInput">Phone Number</label>
@@ -40,7 +48,7 @@
                         </div>
                  </form>
             </div>
-            <div class="col-md-6">
+            <div class="col-sm-6">
                 <img class="img-fluid" src="/img/waiting.jpeg" alt="people eating" >
             </div>
             
