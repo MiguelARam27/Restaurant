@@ -12,15 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-//Admin
-Route::get('/admin', 'AdminController@dashboard');
-//Admin food category
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
-Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
-Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
-
 //Admin auth
 Route::get('/admin/login', function () {
     return view('admin/login');
@@ -31,6 +22,19 @@ Route::get('/admin/register', function () {
 Route::get('/app', function () {
     return view('test');
 });
+
+//Admin
+Route::get('/admin', 'AdminController@dashboard');
+//Admin food category
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+//Admin food Items
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+
+
 
 //Static Pages
 Route::get('/', 'StaticPagesController@home');
