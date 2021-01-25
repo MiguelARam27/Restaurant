@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
+        {{-- csrf token --}}
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Fonts -->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700&display=swap');
