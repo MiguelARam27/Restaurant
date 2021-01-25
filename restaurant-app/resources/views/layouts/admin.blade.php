@@ -156,7 +156,7 @@
                                         @guest
                                         No User name
                                         @else
-                                        {{ Auth::user()->name }}
+                                        {{ Auth::user()->firstName }} {{ Auth::user()->lastName }}
                                         @endguest
                                     </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
