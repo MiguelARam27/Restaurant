@@ -52,3 +52,7 @@ Route::get('/contact','StaticPagesController@contact');
 Route::get('/offers','StaticPagesController@offers');
 Route::get('/menu','StaticPagesController@menu');
 Route::get('/menu/{slug}','StaticPagesController@singleMenu');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
