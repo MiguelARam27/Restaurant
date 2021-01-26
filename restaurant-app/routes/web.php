@@ -41,7 +41,7 @@ Route::get('/admin/users', 'admin\UsersController@index');
 Route::get('/admin/users/create', 'admin\UsersController@create');
 Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
 Route::post('/admin/users','admin\UsersController@store');
-
+Route::put('/admin/users/{id}','admin\UsersController@update');
 
 
 //Static Pages

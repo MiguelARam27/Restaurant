@@ -16,7 +16,7 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        $users = User::paginate(4);
+        $users = User::paginate(10);
         return view('admin/users/all',['users'=>$users]);
     }
     public function create(){
@@ -35,7 +35,42 @@ class UsersController extends Controller
         $user->roles()->attach(request('role_id'));
         return redirect('/admin/users');
     }
-    public function edit(){
-        return view('admin/users/edit');
+    public function edit($id){
+    
+    // request()->validate([
+        //     'firstName' => ['required', 'string', 'max:255'],
+        //     'lastName' => ['required', 'string', 'max:255'],
+        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        //     'password' => ['required', 'string', 'min:8', 'confirmed'],
+        //     'role_id' => ['required'],
+        // ]);
+
+        $user = User::find($id);
+        $roles = Role::all();
+        return view('admin/users/edit',
+        [
+        'user'=>$user,
+        'roles'=>$roles
+        ]);
+    }
+    public function update($id){
+    
+        request()->validate([
+            'firstName' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'password' => ['required', 'string', 'confirmed'],
+            'role_id' => ['required'],
+        ]);
+
+        $user = User::find($id);
+        $user->firstName = request('firstName');
+        $user->lastName = request('lastName');
+        $user->email = request('email');
+        $user->password = Hash::make(request('password'));
+        $user->save();
+        $user->roles()->sync([request('role_id')]);
+
+        return redirect('/admin/users');
     }
 }
