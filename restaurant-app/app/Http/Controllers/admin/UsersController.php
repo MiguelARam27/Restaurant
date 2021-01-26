@@ -16,7 +16,8 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        return view('admin/users/all');
+        $users = User::paginate(4);
+        return view('admin/users/all',['users'=>$users]);
     }
     public function create(){
         $roles = Role::all();
