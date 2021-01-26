@@ -73,6 +73,7 @@
                         </tbody>
 
                     </table>
+                    {{-- //pagnation --}}
                     {{$users->links()}}
                 </div>
             </div>
