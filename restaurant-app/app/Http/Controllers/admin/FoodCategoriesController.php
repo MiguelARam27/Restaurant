@@ -16,20 +16,22 @@ class FoodCategoriesController extends Controller
         return view('admin/food-categories/all',['categories'=>$categories]);
     }
     public function create(){
-        $categories = FoodCategory::paginate(10);
-        return view('admin/food-categories/create', ['categories'=>$categories]);
+
+        return view('admin/food-categories/create');
     }
     public function store(){
 
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['required', 'string']
+            'image_url' => ['required', 'string'],
+            'category_id'=>['required','integer']
         ]);
         $category = new FoodCategory();
         $category->title = request('title');
         $category->description = request('description');
         $category->image_url = request('image_url');
+    
         $category->save();
 
        

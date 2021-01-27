@@ -14,13 +14,13 @@ class CreateFoodItemsTable extends Migration
     public function up()
     {
         Schema::create('food_items', function (Blueprint $table) {
-            $table->bigIncrements('id')->index();
+            $table->bigIncrements('id');
             $table->string('title');
-            $table->float('price',8,2);
-            $table->string('description');
-            $table->text('image_url');
-            $table->bigInteger('category_id')->unsigned()->nullable();
-            $table->timestamps();
+            $table->text('description');
+            $table->text('image_url')->nullable();
+            $table->float('price', 8, 2);
+            $table->unsignedBigInteger('category_id')->index()->nullable();
+            $table->timestamps(); 
         });
 
         Schema::table('food_items', function (Blueprint $table) {

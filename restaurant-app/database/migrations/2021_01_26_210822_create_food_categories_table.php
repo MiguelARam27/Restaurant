@@ -14,10 +14,10 @@ class CreateFoodCategoriesTable extends Migration
     public function up()
     {
         Schema::create('food_categories', function (Blueprint $table) {
-            $table->bigIncrements('id')->index();
+            $table->bigIncrements('id');
             $table->string('title');
+            $table->text('description');
             $table->text('image_url');
-            $table->string('description');
             $table->timestamps();
         });
     }

@@ -50,7 +50,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="inputCategory">Category Description</label>
+                            <label for="inputDescription">Category Description</label>
                             <input id="inputDescription" type="text"
                                 class="form-control form-control-lg @error('description') is-invalid @enderror"
                                 name="description" value="{{ old('description') }}" required autocomplete="description"
