@@ -16,7 +16,8 @@ class UsersController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        $users = User::paginate(10);
+        // $item = FoodItem::with('categories')->get();
+        $users = User::with('roles')->get();
         return view('admin/users/all',['users'=>$users]);
     }
     public function create(){

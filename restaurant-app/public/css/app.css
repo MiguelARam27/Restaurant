@@ -11352,6 +11352,12 @@ table {
   position: relative;
 }
 
+.footer {
+  all: initial;
+  position: absolute;
+  background-color: red;
+}
+
 body {
   line-height: 1;
   background: white;

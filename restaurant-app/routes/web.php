@@ -25,6 +25,7 @@ Route::get('/app', function () {
 
 //Admin
 Route::get('/admin', 'AdminController@dashboard');
+
 //Admin food category
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
 Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store');
@@ -40,9 +41,18 @@ Route::post('/admin/food-items', 'admin\FoodItemsController@store');
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 Route::put('/admin/food-items/{id}','admin\FoodItemsController@update');
 Route::get('/admin/food-items/{id}/delete','admin\FoodItemsController@delete');
+
 //Admin Customers
-Route::get('/admin/offers-members', 'admin\CustomersController@allOffersMembers');
+//Admin Members
+Route::get('/admin/members', 'admin\MembersController@index');
+Route::get('/admin/members/create', 'admin\MembersController@create');
+Route::post('/admin/members', 'admin\MembersController@store');
+Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
+Route::put('/admin/members/{id}','admin\MembersController@update');
+Route::get('/admin/members/{id}/delete','admin\MembersController@delete');
+//Admin Reservations
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+
 //Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');
 Route::get('/admin/users/create', 'admin\UsersController@create');

@@ -195,7 +195,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">categories</th>
+                                <th scope="col">Categories</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Date Created </th>

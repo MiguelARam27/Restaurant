@@ -14,11 +14,8 @@ class FoodItemsController extends Controller
     }
     public function index(){
         $item = FoodItem::with('categories')->get();
-        $example = FoodItem::with('categories')->get();
-        
-        $categories = FoodCategory::all();
-      
-        return view('admin/food-items/all',['items'=>$item,'categories'=>$categories,'examples'=>$example]);
+
+        return view('admin/food-items/all',['items'=>$item]);
     }
     public function create(){
        
