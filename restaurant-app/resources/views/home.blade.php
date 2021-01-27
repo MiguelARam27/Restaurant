@@ -11,7 +11,7 @@
 @section('content')
 <section id="information">
     <div class="restaurant-image">
-        <img src="img/top-down.jpg">
+        <img src="img/landing.jpg">
     </div>
     <div class="info">
         <h2>We Started From The Bottom In 1987</h2>

@@ -12,6 +12,12 @@
         line-height: 1.2;
         font-weight: 500;
     }
+    .thank_you {
+        h1,
+        p {
+            text-align: center !important;
+        }
+    }
     form {
         .form-group {
             .form-control {

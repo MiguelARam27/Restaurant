@@ -11157,6 +11157,11 @@ table {
   font-weight: 500;
 }
 
+.offers-page .thank_you h1,
+.offers-page .thank_you p {
+  text-align: center !important;
+}
+
 .offers-page form .form-group .form-control {
   padding: 10px;
   border: 2px solid #9c1b24;
@@ -11501,12 +11506,15 @@ body {
 }
 
 #information .restaurant-image {
-  overflow: hidden;
+  background-color: red;
   height: 100%;
 }
 
 #information .restaurant-image img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #information .info {

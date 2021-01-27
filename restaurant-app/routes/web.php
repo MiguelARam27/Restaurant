@@ -46,7 +46,6 @@ Route::get('/admin/food-items/{id}/delete','admin\FoodItemsController@delete');
 //Admin Members
 Route::get('/admin/members', 'admin\MembersController@index');
 Route::get('/admin/members/create', 'admin\MembersController@create');
-Route::post('/offers', 'admin\MembersController@store');
 Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
 Route::put('/admin/members/{id}','admin\MembersController@update');
 Route::get('/admin/members/{id}/delete','admin\MembersController@delete');
@@ -63,10 +62,12 @@ Route::get('/admin/users/{id}/delete','admin\UsersController@delete');
 
 //Static Pages
 Route::get('/', 'StaticPagesController@home');
+Route::get('/thank-you', 'StaticPagesController@thank_you');
 Route::get('/about','StaticPagesController@about');
 Route::get('/reservations','StaticPagesController@reservations');
 Route::get('/contact','StaticPagesController@contact');
 Route::get('/offers','StaticPagesController@offers');
+Route::post('/offers','StaticPagesController@registerMember');
 Route::get('/menu','StaticPagesController@menu');
 Route::get('/menu/{slug}','StaticPagesController@singleMenu');
 
