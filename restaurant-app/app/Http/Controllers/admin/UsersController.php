@@ -37,14 +37,6 @@ class UsersController extends Controller
     }
     public function edit($id){
     
-    // request()->validate([
-        //     'firstName' => ['required', 'string', 'max:255'],
-        //     'lastName' => ['required', 'string', 'max:255'],
-        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'password' => ['required', 'string', 'min:8', 'confirmed'],
-        //     'role_id' => ['required'],
-        // ]);
-
         $user = User::find($id);
         $roles = Role::all();
         return view('admin/users/edit',
