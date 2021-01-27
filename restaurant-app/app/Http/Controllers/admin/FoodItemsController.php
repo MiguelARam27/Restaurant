@@ -13,7 +13,7 @@ class FoodItemsController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        $item = FoodItem::paginate(10); 
+        $item = FoodItem::with('categories')->get();
         $example = FoodItem::with('categories')->get();
         
         $categories = FoodCategory::all();
@@ -46,7 +46,7 @@ class FoodItemsController extends Controller
         $item = FoodItem::find($id);
         $categories = FoodCategory::all();
         return view('admin/food-items/edit', [
-            'items' => $item,
+            'item' => $item,
             'categories'=>$categories
         ]);
 

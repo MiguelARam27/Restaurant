@@ -12,7 +12,7 @@ class FoodItem extends Model
         'title','description', 'image_url', 'price', 'category_id'
     ];
     public function categories(){
-        return $this->belongsTo('App\FoodCategory');
+        return $this->belongsTo('App\FoodCategory', 'category_id');
     }
 
     // public function category(){

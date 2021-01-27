@@ -195,7 +195,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">id</th>
+                                <th scope="col">categories</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Date Created </th>
@@ -206,7 +206,7 @@
                         <tbody>
                             @foreach ($items as $item)
                             <tr>
-                                <th scope="row">{{$item->id}}</th>
+                                <th scope="row">{{$item->categories->title}}</th>
                                 <td>{{$item->title}}</td>
                                 <td>${{$item->price}}</td>
                                 <td>{{date('m/d/y',strtotime($item->created_at))}}</td>
@@ -222,12 +222,7 @@
 
                         </tbody>
                     </table>
-                    {{-- @foreach ($categories as $category)
-                    <h2>{{$category->title}}</h2>
-                    @endforeach --}}
-                    {{-- @foreach ($examples as $example)
-                    {{$example->categories->title}}
-                    @endforeach --}}
+
                 </div>
             </div>
         </div>
