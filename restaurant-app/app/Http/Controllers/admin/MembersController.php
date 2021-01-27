@@ -13,8 +13,8 @@ class MembersController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-        // $users = User::with('roles')->get();
-        $members =Member::all();
+    
+        $members =Member::paginate(10);
         return view('admin/members/all-offers-members',['members'=>$members]);
     }
 
@@ -25,20 +25,20 @@ class MembersController extends Controller
     public function store(){
 
         request()->validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'image_url' => ['required', 'string'],
-            'category_id'=>['required','integer']
+            'firstName' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string'],
+            'phone_number' => ['required', 'string']
         ]);
-        $category = new FoodCategory();
-        $category->title = request('title');
-        $category->description = request('description');
-        $category->image_url = request('image_url');
-    
-        $category->save();
+        $member = new Member();
+        $member->firstName = request('firstName');
+        $member->lastName = request('lastName');
+        $member->email = request('email');
+        $member->phone_number = request('phone_number');
+        $member->save();
 
        
-        return redirect('/admin/members');
+        return redirect('/');
     }
     public function edit($id){
         $member = Member::find($id);
@@ -57,12 +57,12 @@ class MembersController extends Controller
             'phone_number' => ['required', 'string']
         ]);
         
-        $category = Member::find($id);
-        $category->firstName = request('firstName');
-        $category->lastName = request('lastName');
-        $category->email = request('email');
-        $category->phone_number = request('phone_number');
-        $category->save();
+        $member = Member::find($id);
+        $member->firstName = request('firstName');
+        $member->lastName = request('lastName');
+        $member->email = request('email');
+        $member->phone_number = request('phone_number');
+        $member->save();
 
         return redirect('/admin/members');
     }

@@ -46,7 +46,7 @@ Route::get('/admin/food-items/{id}/delete','admin\FoodItemsController@delete');
 //Admin Members
 Route::get('/admin/members', 'admin\MembersController@index');
 Route::get('/admin/members/create', 'admin\MembersController@create');
-Route::post('/admin/members', 'admin\MembersController@store');
+Route::post('/offers', 'admin\MembersController@store');
 Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
 Route::put('/admin/members/{id}','admin\MembersController@update');
 Route::get('/admin/members/{id}/delete','admin\MembersController@delete');
