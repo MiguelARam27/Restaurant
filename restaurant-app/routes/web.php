@@ -75,8 +75,8 @@ Route::get('/menu','StaticPagesController@menu');
 Route::get('/menu/{slug}','StaticPagesController@singleMenu');
 
 //Admin settings
-Route::get('/admin/settings','admin\SettingsController@general');
-Route::post('/admin/settings','admin\SettingsController@saveGeneral');
+Route::get('/admin/settings/general','admin\SettingsController@general');
+Route::post('/admin/settings/general','admin\SettingsController@saveGeneralSetting');
 //Admin SEO
 Route::get('/admin/settings/seo','admin\SettingsController@seo');
 Route::post('/admin/settings/seo','admin\SettingsController@saveSeo');
