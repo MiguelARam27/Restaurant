@@ -74,6 +74,16 @@ Route::get('/offers/thank-you', 'StaticPagesController@thank_you');
 Route::get('/menu','StaticPagesController@menu');
 Route::get('/menu/{slug}','StaticPagesController@singleMenu');
 
+//Admin settings
+Route::get('/admin/settings','admin\SettingsController@general');
+Route::post('/admin/settings','admin\SettingsController@saveGeneral');
+//Admin SEO
+Route::get('/admin/settings/seo','admin\SettingsController@seo');
+Route::post('/admin/settings/seo','admin\SettingsController@saveSeo');
+//Admin Social Accounts
+Route::get('/admins/settings/social','admin\SettingsController@social');
+Route::post('/admin/settings/social','admin\SettingsController@saveSocial');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

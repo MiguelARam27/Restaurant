@@ -108,7 +108,15 @@
                     <div id="submenu-5" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/admintemp/pages/cards.html">General Settings <span
+                                <a class="nav-link" href="/admin/settings/">General Settings <span
+                                        class="badge badge-secondary">New</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/settings/seo">SEO <span
+                                        class="badge badge-secondary">New</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin/settings/social">Social Media Accounts<span
                                         class="badge badge-secondary">New</span></a>
                             </li>
 
