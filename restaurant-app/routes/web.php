@@ -50,7 +50,8 @@ Route::get('/admin/members/{id}/edit', 'admin\MembersController@edit');
 Route::put('/admin/members/{id}','admin\MembersController@update');
 Route::get('/admin/members/{id}/delete','admin\MembersController@delete');
 //Admin Reservations
-Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+Route::get('/admin/reservations', 'admin\ReservationsController@index');
+Route::get('/admin/reservations/{id}/delete', 'admin\ReservationsController@delete');
 
 //Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');
@@ -65,7 +66,7 @@ Route::get('/', 'StaticPagesController@home');
 Route::get('/offers/thank-you', 'StaticPagesController@thank_you');
 Route::get('/about','StaticPagesController@about');
 Route::get('/reservations','StaticPagesController@reservations');
-Route::post('/reservations','ReservationsController@reservations');
+Route::post('/reservations','StaticPagesController@makeReservation');
 Route::get('/contact','StaticPagesController@contact');
 Route::get('/offers','StaticPagesController@offers');
 Route::post('/offers','StaticPagesController@registerMember');
