@@ -22,24 +22,7 @@ class MembersController extends Controller
 
         return view('admin/members/create');
     }
-    public function store(){
 
-        request()->validate([
-            'firstName' => ['required', 'string', 'max:255'],
-            'lastName' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string'],
-            'phone_number' => ['required', 'string']
-        ]);
-        $member = new Member();
-        $member->firstName = request('firstName');
-        $member->lastName = request('lastName');
-        $member->email = request('email');
-        $member->phone_number = request('phone_number');
-        $member->save();
-
-       
-        return redirect('/');
-    }
     public function edit($id){
         $member = Member::find($id);
         

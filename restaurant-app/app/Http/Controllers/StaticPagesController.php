@@ -35,7 +35,7 @@ class StaticPagesController extends Controller
         $member->phone_number = request('phone_number');
         $member->save();
 
-        return redirect('/thank-you');
+        return redirect('/offers/thank-you');
     }
     public function thank_you(){
         return view('pages/thank-you');

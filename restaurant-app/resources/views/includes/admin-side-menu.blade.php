@@ -73,6 +73,20 @@
                                 <a class="nav-link" href="/admin/reservations">Reservations <span
                                         class="badge badge-secondary">New</span></a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1-3" aria-controls="submenu-1-3">Reservations</a>
+                                <div id="submenu-1-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/reservations">All Reservations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/admin/reservations"> New </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </li>
