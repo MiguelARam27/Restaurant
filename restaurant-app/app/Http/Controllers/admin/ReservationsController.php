@@ -46,7 +46,7 @@ class ReservationsController extends Controller
         $reservation->email = request('email');
         $reservation->phone_number = request('phone_number');
         $reservation->time = request('time');
-        $reservation->guest_total = request('guest_total');
+        $reservation->guests_total = request('guests_total');
         $reservation->save();
 
         return redirect('/admin/reservations');

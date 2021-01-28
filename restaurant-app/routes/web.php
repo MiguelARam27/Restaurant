@@ -63,13 +63,14 @@ Route::get('/admin/users/{id}/delete','admin\UsersController@delete');
 
 //Static Pages
 Route::get('/', 'StaticPagesController@home');
-Route::get('/offers/thank-you', 'StaticPagesController@thank_you');
 Route::get('/about','StaticPagesController@about');
 Route::get('/reservations','StaticPagesController@reservations');
 Route::post('/reservations','StaticPagesController@makeReservation');
+Route::get('/reservations/thank-you', 'StaticPagesController@reservation_thanks');
 Route::get('/contact','StaticPagesController@contact');
 Route::get('/offers','StaticPagesController@offers');
 Route::post('/offers','StaticPagesController@registerMember');
+Route::get('/offers/thank-you', 'StaticPagesController@thank_you');
 Route::get('/menu','StaticPagesController@menu');
 Route::get('/menu/{slug}','StaticPagesController@singleMenu');
 

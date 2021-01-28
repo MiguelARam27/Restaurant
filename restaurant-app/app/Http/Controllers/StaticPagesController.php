@@ -67,7 +67,10 @@ class StaticPagesController extends Controller
         $reservation->save();
 
        
-        return redirect('/');
+        return redirect('/reservations/thank-you');
+    }
+    public function reservation_thanks(){
+        return view('pages/reservaton-thanks');
     }
 
     public function menu(){

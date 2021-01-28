@@ -14,8 +14,4 @@ class FoodItem extends Model
     public function categories(){
         return $this->belongsTo('App\FoodCategory', 'category_id');
     }
-
-    // public function category(){
-    //     return $this->belongsTo(App\FoodCategory::class, 'category_id');
-    // }
 }
