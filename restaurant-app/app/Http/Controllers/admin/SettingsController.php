@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 use App\GeneralSetting;
 use App\SeoSetting;
+use App\SocialSetting;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -67,6 +68,34 @@ class SettingsController extends Controller
          $seo_setting->save();
 
         return redirect('/admin/settings/seo');
+    }
+    public function social(){
+        
+        $social_setting = SocialSetting::find(1);
+
+        return view('admin/settings/social', [
+            'social_setting' => $social_setting
+        ]);
+    }
+    public function saveSocial(){
+
+        request()->validate([
+            'facebook_url' => ['string'],
+            'twitter_url' => ['string'],
+            'instagram_url' => ['string'],
+            'youtube_url' => ['string'],
+            
+        ]);
+
+        $social_setting = SocialSetting::find(1);
+        $social_setting->facebook_url = request('facebook_url');
+        $social_setting->twitter_url = request('twitter_url');
+        $social_setting->youtube_url = request('youtube_url');
+        $social_setting->instagram_url = request('instagram_url');
+        $social_setting->save();
+
+        return redirect('/admin/settings/social');
+
     }
 
 }

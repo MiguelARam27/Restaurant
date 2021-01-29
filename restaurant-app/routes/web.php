@@ -81,7 +81,7 @@ Route::post('/admin/settings/general','admin\SettingsController@saveGeneralSetti
 Route::get('/admin/settings/seo','admin\SettingsController@seo');
 Route::post('/admin/settings/seo','admin\SettingsController@saveSeo');
 //Admin Social Accounts
-Route::get('/admins/settings/social','admin\SettingsController@social');
+Route::get('/admin/settings/social','admin\SettingsController@social');
 Route::post('/admin/settings/social','admin\SettingsController@saveSocial');
 
 Auth::routes();
