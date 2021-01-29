@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 use App\GeneralSetting;
+use App\SeoSetting;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -10,10 +11,6 @@ class SettingsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-    }
-    public function index(){
-    
-        return view('admin/food-categories/all',['categories'=>$categories]);
     }
     public function general(){
         $settings = GeneralSetting::find(1);
@@ -35,18 +32,41 @@ class SettingsController extends Controller
             'zip_code' => ['required', 'string']
         ]);
 
-        $category = GeneralSetting::find(1);
-        // return $category;
-        $category->site_title = request('site_title');
-        $category->address_1 = request('address_1');
-        $category->address_2 = request('address_2');
-        $category->city = request('city');
-        $category->state = request('state');
-        $category->zip_code = request('zip_code');
-        $category->phone_number = request('phone_number');
-        $category->logo_image_url = request('log_image_url');
-        $category->save();
+        $setting = GeneralSetting::find(1);
+        // return $setting;
+        $setting->site_title = request('site_title');
+        $setting->address_1 = request('address_1');
+        $setting->address_2 = request('address_2');
+        $setting->city = request('city');
+        $setting->state = request('state');
+        $setting->zip_code = request('zip_code');
+        $setting->phone_number = request('phone_number');
+        $setting->logo_image_url = request('log_image_url');
+        $setting->save();
 
         return redirect('/admin/settings/general');
     }
+
+    public function seo(){
+        $seo_setting = SeoSetting::find(1);
+        return view('admin/settings/seo', [
+            'seo_setting' => $seo_setting
+        ]);
+    }
+
+    public function saveSeo(){
+  
+        request()->validate([
+            'description' => ['required', 'string'],
+            'keywords' => ['required', 'string'],
+        ]);
+
+        $seo_setting = SeoSetting::find(1);
+         $seo_setting->description = request('description');
+         $seo_setting->keywords = request('keywords');
+         $seo_setting->save();
+
+        return redirect('/admin/settings/seo');
+    }
+
 }
