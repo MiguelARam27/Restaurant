@@ -11453,6 +11453,24 @@ body {
 
 #app-layout .side-menu .social-icons {
   display: flex;
+  justify-content: space-evenly;
+}
+
+#app-layout .side-menu .social-icons .twitter:hover {
+  background-color: #1da1f2;
+}
+
+#app-layout .side-menu .social-icons .facebook:hover {
+  background-color: #4267b2;
+}
+
+#app-layout .side-menu .social-icons .youtube:hover {
+  background-color: #ff0000;
+}
+
+#app-layout .side-menu .social-icons .instagram:hover {
+  background-color: #405de6;
+  color: rgba(131, 58, 180, 0.1);
 }
 
 #app-layout .side-menu .social-icons a {
@@ -11463,10 +11481,15 @@ body {
   font-size: 0.9rem;
   text-decoration: none;
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 2.2rem;
+  width: 2.2rem;
   border-radius: 50%;
   margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+#app-layout .side-menu .social-icons a:hover {
+  transform: scale(1.05);
 }
 
 #app-layout .side-menu .location {
@@ -11502,11 +11525,10 @@ body {
 #information {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
+  grid-template-rows: 70vh;
 }
 
 #information .restaurant-image {
-  background-color: red;
   height: 100%;
 }
 

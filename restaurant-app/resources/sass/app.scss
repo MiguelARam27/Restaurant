@@ -104,6 +104,30 @@ body {
         }
         .social-icons {
             display: flex;
+            justify-content: space-evenly;
+
+            .twitter {
+                &:hover {
+                    background-color: $twitter;
+                }
+            }
+            .facebook {
+                &:hover {
+                    background-color: $facebook;
+                }
+            }
+            .youtube {
+                &:hover {
+                    background-color: $youtube;
+                }
+            }
+            .instagram {
+                &:hover {
+                    background-color: $instagram;
+                    color: rgba($instagram2, 0.1);
+                }
+            }
+
             a {
                 display: flex;
                 justify-content: center;
@@ -112,10 +136,15 @@ body {
                 font-size: 0.9rem;
                 text-decoration: none;
                 color: white;
-                height: 30px;
-                width: 30px;
+                height: 2.2rem;
+                width: 2.2rem;
                 border-radius: 50%;
                 margin-right: 10px;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
         .location {
@@ -164,10 +193,10 @@ body {
 #information {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh;
+    grid-template-rows: 70vh;
     .restaurant-image {
         // overflow: hidden;
-        background-color: red;
+
         height: 100%;
         img {
             width: 100%;

@@ -1,10 +1,10 @@
 <div class="side-menu">
     <a href="/" class="logo">
-        <img src="/img/logo.png">
+        <img src="{{$logo ?? ''}}">
     </a>
-    <div class="menu">
+    <div class=" menu">
         <div class="menu-title">
-            Menu
+            Bob's
         </div>
         <ul class="links">
             <li>
@@ -25,19 +25,20 @@
         </ul>
     </div>
     <div class="social-icons">
-        <a href="#">
+        <a href="{{$facebook}}" class="facebook">
             <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
-        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="{{$twitter}}" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="{{$instagram}}" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="{{$youtube}}" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
     </div>
     <div class="location">
         <div class="address">
-            234 Main st,<br>
-            New York, New York 11747
+            {{$address1}}<br>
+            {{$address2}}
         </div>
         <div class="phone-number">
-            <a href="tel:7182198652">718-219-8652</a>
+            <a href="tel:{{$phone_number}}">{{$phone_number}}</a>
         </div>
     </div>
 </div>

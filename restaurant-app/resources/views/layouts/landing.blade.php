@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>{{$title ?? ''}}</title>
     {{-- csrf token --}}
+    @include('includes.metatags')
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Fonts -->
     <style>
@@ -22,8 +23,8 @@
     <section id="app-layout">
         @include('includes.side-menu')
         <div class="welcome-jumbo">
-            <div class="status">NEW</div>
-            <h1>Bob's Burgers</h1>
+
+            <h1>{{$title}}</h1>
             <img src="/img/hamburger.png" class="burger-fries">
         </div>
     </section>

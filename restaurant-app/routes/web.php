@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Member;
+use App\Reservation;
+use App\GeneralSetting;
+use App\SocialSetting;
+use App\SeoSetting;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,3 +91,28 @@ Route::post('/admin/settings/social','admin\SettingsController@saveSocial');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'menu.index', 'menu.single-menu'],function($view){
+
+    $setting = GeneralSetting::find(1);
+    $social = SocialSetting::find(1);
+    $seo=SeoSetting::find(1);
+
+    $view->with([
+        'title'=>$setting->site_title,
+        'logo'=>$setting->logo_image_url,
+        'state'=>$setting->state,
+        'zip'=>$setting->zip_code,
+        'city'=>$setting->city,
+        'address1'=>$setting->address_1,
+        'address2'=>$setting->address_2,
+        'phone_number'=>$setting->phone_number,
+        'twitter'=>$social->twitter_url,
+        'youtube'=>$social->youtube_url,
+        'instagram'=>$social->instagram_url,
+        'facebook'=>$social->facebook_url,
+        'keywords'=>$seo->keywords,
+        'description'=>$seo->description
+        ]);
+
+});
