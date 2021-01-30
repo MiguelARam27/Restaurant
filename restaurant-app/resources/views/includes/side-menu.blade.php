@@ -36,6 +36,7 @@
         <div class="address">
             {{$address1}}<br>
             {{$address2}}
+            {{$city}} {{$state}} {{$zip}}
         </div>
         <div class="phone-number">
             <a href="tel:{{$phone_number}}">{{$phone_number}}</a>

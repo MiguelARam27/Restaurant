@@ -11,13 +11,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
 
 @import "reset";
+@import "home";
 @import "pages/about";
+@import "pages/contact";
 
 @import "pages/waitlist";
 @import "pages/offers";
 @import "menu/index";
 @import "menu/single-menu";
-@import "home";
+
 @import "footer";
 
 body {
