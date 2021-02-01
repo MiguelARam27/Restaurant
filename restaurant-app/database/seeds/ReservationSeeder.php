@@ -23,7 +23,7 @@ class ReservationSeeder extends Seeder
                 'guests_total'=> rand(1,5),
                 'time'=>rand(6,10),
                 'updated_at'=> Carbon::now(),
-                'created_at'=>Carbon::now()
+                'created_at'=>Carbon::now()->subDays(30)
             ]);
         }
     }
