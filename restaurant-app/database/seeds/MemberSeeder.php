@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\carbon;
+use Faker\factory as faker;
 class MemberSeeder extends Seeder
 {
     /**
@@ -11,45 +12,18 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('members')->insert([
-            'firstName'=>'Billy',
-            'lastName'=>'james',
-            'email' => 'billy@gmail.com',
-            'phone_number'=> '408-321-8987',
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('members')->insert([
-            'firstName'=>'John',
-            'lastName'=>'james',
-            'email' => 'john@gmail.com',
-            'phone_number'=> '408-245-8074',
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('members')->insert([
-            'firstName'=>'Jane',
-            'lastName'=>'james',
-            'email' => 'Jane@gmail.com',
-            'phone_number'=> '408-190-1219',
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('members')->insert([
-            'firstName'=>'janey',
-            'lastName'=>'james',
-            'email' => 'janey@gmail.com',
-            'phone_number'=> '408-290-0129',
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('members')->insert([
-            'firstName'=>'Smith',
-            'lastName'=>'james',
-            'email' => 'Smith@gmail.com',
-            'phone_number'=> '408-142-8012',
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
+
+        $faker = Faker::create();
+        foreach (range(1,100) as $index) {
+            DB::table('members')->insert([
+                'firstName'=>$faker->firstName,
+                'lastName'=>$faker->lastName,
+                'email' => $faker->email,
+                'phone_number'=> $faker->phoneNumber,
+                'updated_at'=> Carbon::now(),
+                'created_at'=>Carbon::now()
+            ]);
+        }
+   
     }
 }

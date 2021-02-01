@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\carbon;
+use Faker\factory as faker;
 class UsersTableSeeder extends Seeder
 {
     /**
@@ -20,30 +21,6 @@ class UsersTableSeeder extends Seeder
             'created_at'=>Carbon::now()
         ]);
         DB::table('users')->insert([
-            'firstName'=>'Sindy',
-            'lastName'=>'Johnson',
-            'email' => 'Sindy@gmail.com',
-            'password'=> Hash::make('123456'),
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('users')->insert([
-            'firstName'=>'Johnny',
-            'lastName'=>'raiz',
-            'email' => 'Johnny@gmail.com',
-            'password'=> Hash::make('123456'),
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('users')->insert([
-            'firstName'=>'Mike',
-            'lastName'=>'raiz',
-            'email' => 'Mike@gmail.com',
-            'password'=> Hash::make('123456'),
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-        DB::table('users')->insert([
             'firstName'=>'Miguel',
             'lastName'=>'Ramirez',
             'email' => 'colotor27@gmail.com',
@@ -51,5 +28,16 @@ class UsersTableSeeder extends Seeder
             'updated_at'=> Carbon::now(),
             'created_at'=>Carbon::now()
         ]);
+        $faker = Faker::create();
+        foreach (range(1,20) as $index) {
+            DB::table('users')->insert([
+                'firstName'=>$faker->firstName,
+                'lastName'=>$faker->lastName,
+                'email' => $faker->email,
+                'password'=> Hash::make('12345678'),
+                'updated_at'=> $faker->dateTimeThisMonth,
+                'created_at'=>$faker->dateTimeThisMonth,
+            ]);
+        }
     }
 }

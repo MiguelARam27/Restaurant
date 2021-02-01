@@ -1,8 +1,9 @@
 <?php
 use Illuminate\Database\Seeder;
+
+
 use Carbon\carbon;
-
-
+use Faker\factory as faker;
 class ReservationSeeder extends Seeder
 {
     /**
@@ -12,55 +13,18 @@ class ReservationSeeder extends Seeder
      */
     public function run()
     {
-         DB::table('reservations')->insert([
-            'firstName'=>'Billy',
-            'lastName'=>'james',
-            'email' => 'billy@gmail.com',
-            'phone_number'=> '408-321-8987',
-            'guests_total'=>2,
-            'time'=>9,
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-         DB::table('reservations')->insert([
-            'firstName'=>'baily',
-            'lastName'=>'jane',
-            'email' => 'baily@gmail.com',
-            'phone_number'=> '407-198-1021',
-            'guests_total'=>2,
-            'time'=>9,
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-         DB::table('reservations')->insert([
-            'firstName'=>'Johyn',
-            'lastName'=>'andres',
-            'email' => 'Gamer1@gmail.com',
-            'phone_number'=> '091-198-9982',
-            'guests_total'=>2,
-            'time'=>9,
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-         DB::table('reservations')->insert([
-            'firstName'=>'Sam',
-            'lastName'=>'Smith',
-            'email' => 'Sam@gmail.com',
-            'phone_number'=> '408-321-1492',
-            'guests_total'=>2,
-            'time'=>9,
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
-         DB::table('reservations')->insert([
-            'firstName'=>'Billy',
-            'lastName'=>'james',
-            'email' => 'billy@gmail.com',
-            'phone_number'=> '408-321-1324',
-            'guests_total'=>2,
-            'time'=>9,
-            'updated_at'=> Carbon::now(),
-            'created_at'=>Carbon::now()
-        ]);
+        $faker = Faker::create();
+        foreach (range(1,100) as $index) {
+            DB::table('reservations')->insert([
+                'firstName'=>$faker->firstName,
+                'lastName'=>$faker->lastName,
+                'email' => $faker->email,
+                'phone_number'=> $faker->phoneNumber,
+                'guests_total'=> rand(1,5),
+                'time'=>rand(6,10),
+                'updated_at'=> Carbon::now(),
+                'created_at'=>Carbon::now()
+            ]);
+        }
     }
 }
