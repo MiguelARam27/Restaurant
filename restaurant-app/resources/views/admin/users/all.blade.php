@@ -45,21 +45,34 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Title</th>
+
+                                @if (Auth::user()->isAdmin())
+                                <th>Type</th>
+                                @endif
+
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Date Created </th>
+                                @if (Auth::user()->isAdmin())
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
+                                @endif
+
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($users as $key=>$user)
+
                             <tr>
-                                <td scope="row">{{$user->roles[0]->title}}</td>
+                                @if (Auth::user()->isAdmin())
+                                <td>{{$user->roles[0]->title}}</td>
+                                @endif
                                 <td>{{$user->firstName}} {{$user->lastName}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{date('m/d/y',strtotime($user->created_at))}}</td>
+                                @if (Auth::user()->isAdmin())
+
+
                                 <td><a href="/admin/users/{{$user->id}}/edit"><i class="far fa-edit"></i></a></td>
                                 <td>
                                     <a onclick="if(!confirm('are you sure you want to delete this category')){return false;}"
@@ -67,6 +80,8 @@
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                @endif
+
                             </tr>
                             @endforeach
 
@@ -74,7 +89,7 @@
 
                     </table>
                     {{-- //pagnation --}}
-                    {{-- {{$users->links()}} --}}
+                    {{$users->links()}}
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class RolesTableSeeder extends Seeder
             'title'=>'Employee'
         ]);
         DB::table('role_user')->insert([
-            'role_id'=>'1',
+            'role_id'=>'2',
             'user_id'=>'1'
         ]);
         DB::table('role_user')->insert([
@@ -32,6 +32,10 @@ class RolesTableSeeder extends Seeder
         DB::table('role_user')->insert([
             'role_id'=>'2',
             'user_id'=>'4'
+        ]);
+        DB::table('role_user')->insert([
+            'role_id'=>'1',
+            'user_id'=>'5'
         ]);
     }
 }
