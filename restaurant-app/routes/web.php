@@ -29,6 +29,7 @@ Route::get('/app', function () {
 
 //Admin
 Route::get('/admin', 'AdminController@dashboard');
+Route::get('/admin/rev', 'AdminController@dailyRevenueLast30');
 
 //Admin food category
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
