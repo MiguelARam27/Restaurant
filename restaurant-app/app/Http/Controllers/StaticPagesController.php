@@ -5,6 +5,8 @@ use App\Member;
 use App\Reservation;
 use App\GeneralSetting;
 use App\SocialSetting;
+use App\FoodCategory;
+use App\FoodItem;
 use Illuminate\Http\Request;
 
 
@@ -77,26 +79,17 @@ class StaticPagesController extends Controller
 
     public function menu(){
         
-        // $setting = GeneralSetting::find(1);
-        // $social = SocialSetting::find(1);
-        // return view('menu/index',[
-        //     'title'=>$setting->site_title,
-        //     'logo'=>$setting->logo_image_url,
-        //     'state'=>$setting->state,
-        //     'zip'=>$setting->zip_code,
-        //     'city'=>$setting->city,
-        //     'address1'=>$setting->address_1,
-        //     'address2'=>$setting->address_2,
-        //     'phone_number'=>$setting->phone_number,
-        //     'twitter'=>$social->twitter_url,
-        //     'youtube'=>$social->youtube_url,
-        //     'instagram'=>$social->instagram_url,
-        //     'facebook'=>$social->facebook_url,
-        //     ]);
-            return view('menu/index');
+        $categories = FoodCategory::All(); 
+        return view('menu/index',['categories'=>$categories]);
     }
     
-    public function singleMenu(){
-        return view ('menu/single-menu');
+    public function singleMenu($slug){
+        $foodCategory = FoodCategory::where('title','=',$slug)->first();
+        
+        $foodItems = FoodItem::where('category_id','=',$foodCategory->id)->get();
+        return view ('menu/single-menu',[
+            'foodItem'=>ucfirst($slug),
+            'foodItems'=> $foodItems
+        ]);
     }
 }

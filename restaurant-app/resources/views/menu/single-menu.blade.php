@@ -8,69 +8,28 @@
             <div class="content-box">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Burgers</h1>
+                        <h1>{{$foodItem}}</h1>
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($foodItems as $item)
                     <div class="col-md-6">
                         <div class="item">
                             <div class="title">
-                                <h4>Texas Burger</h4>
-                                <span class="price">$4.99</span>
-                           </div>
-                           <div class="description">
-                               <p>whole wheat bun, texas onion, texas bbq sauce, pickles, flame broiled sirloin beef</p>
-                           </div>
+                                <h4>{{$item->title}}</h4>
+                                <span class="price">{{$item->price}}</span>
+                            </div>
+                            <div class="description">
+                                <p>{{$item->description}}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <h4>Texas Burger</h4>
-                                <span class="price">$4.99</span>
-                           </div>
-                           <div class="description">
-                               <p>whole wheat bun, texas onion, texas bbq sauce, pickles, flame broiled sirloin beef</p>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <h4>Texas Burger</h4>
-                                <span class="price">$4.99</span>
-                           </div>
-                           <div class="description">
-                               <p>whole wheat bun, texas onion, texas bbq sauce, pickles, flame broiled sirloin beef</p>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <h4>Texas Burger</h4>
-                                <span class="price">$4.99</span>
-                           </div>
-                           <div class="description">
-                               <p>whole wheat bun, texas onion, texas bbq sauce, pickles, flame broiled sirloin beef</p>
-                           </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="item">
-                            <div class="title">
-                                <h4>Texas Burger</h4>
-                                <span class="price">$4.99</span>
-                           </div>
-                           <div class="description">
-                               <p>whole wheat bun, texas onion, texas bbq sauce, pickles, flame broiled sirloin beef</p>
-                           </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
-   
+
 @endsection

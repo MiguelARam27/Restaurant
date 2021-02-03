@@ -22,28 +22,35 @@ class FoodCategorySeeder extends Seeder
         DB::table('food_categories')->insert([
             'title' => 'burgers',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
-            'image_url' => '/img/hamburger-and-fries-png-4.png',
+            'image_url' => '/img/hamburger.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
             'title' => 'entrees',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
-            'image_url' => '/img/342-3422633_pork-entrees-steak-pork-png.png',
+            'image_url' => '/img/pork.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
             'title' => 'sides',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
-            'image_url' => '/img/Download-Salad-Transparent-PNG.png',
+            'image_url' => '/img/salad.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
             'title' => 'deserts',
             'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
-            'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
+            'image_url' => '/img/cupcake.png',
+            'updated_at' => Carbon::now(), 
+            'created_at' => Carbon::now()
+        ]);
+        DB::table('food_categories')->insert([
+            'title' => 'drinks',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi omnis iste ab deleniti cupiditate architecto officia aspernatur nulla iusto delectus doloremque possimus recusandae, reiciendis aliquam vel voluptas repellendus natus nihil?',
+            'image_url' => '/img/drinks.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
