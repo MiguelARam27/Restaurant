@@ -43,8 +43,10 @@
                                 <th scope="col">Guests Total</th>
                                 <th scope="col">Time</th>
                                 <th scope="col">Date Created</th>
+                                @if (Auth::user()->isAdmin())
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -56,6 +58,7 @@
                                 <td>{{$reservation->guests_total}}</td>
                                 <td>{{$reservation->time}}</td>
                                 <td>{{date('m/d/Y', strtotime($reservation->updated_at))}}</td>
+                                @if (Auth::user()->isAdmin())
                                 <td>
                                     <a href="/admin/reservations/{{$reservation->id}}/edit"><i
                                             class="far fa-edit"></i></a>
@@ -66,6 +69,7 @@
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
 

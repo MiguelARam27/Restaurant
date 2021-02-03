@@ -93,7 +93,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'menu.index', 'menu.single-menu'],function($view){
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'menu/index', 'menu/single-menu','admin/dashboard'],function($view){
 
     $setting = GeneralSetting::find(1);
     $social = SocialSetting::find(1);

@@ -48,11 +48,15 @@ class AdminController extends Controller
         where role_id = 2
     '));
         
+    
+        $latestReservations = Reservation::where('guests_total','>',0)->limit(5)->orderBy('created_at','desc')->get();
+        
         return view('admin/dashboard',[
         'estimated_income_last30'=> $estimated_income_last_30[0]->total,
         'guestTotal'=>$total_customers_last_30[0]->total,
         'reservationsTotal'=>$total_reservations_last_30[0]->total,
-        'totalEmployees' => $total_employees[0]->total 
+        'totalEmployees' => $total_employees[0]->total,
+        'latestReservations'=>$latestReservations
         ]);
     }
 
@@ -66,9 +70,8 @@ class AdminController extends Controller
             FROM Restaurant.reservations
             group by x desc;
         '));
-        
-
-
-        
+    
     }
+
+
 }

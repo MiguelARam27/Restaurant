@@ -40,8 +40,10 @@
                                 <th scope="col">Email</th>
                                 <th scope="col">Phone Number</th>
                                 <th scope="col">Date Created</th>
+                                @if (Auth::user()->isAdmin())
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -52,6 +54,7 @@
                                 <td>{{$member->email}}</td>
                                 <td>{{$member->phone_number}}</td>
                                 <td>{{date('m/d/y',strtotime($member->created_at))}}</td>
+                                @if (Auth::user()->isAdmin())
                                 <td><a href="/admin/members/{{$member->id}}/edit"><i class="far fa-edit"></i></a>
                                 </td>
                                 <td>
@@ -60,6 +63,8 @@
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                @endif
+
                             </tr>
                             @endforeach
                         </tbody>

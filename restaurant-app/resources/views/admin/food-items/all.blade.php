@@ -199,8 +199,10 @@
                                 <th scope="col">Title</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">Date Created </th>
+                                @if (Auth::user()->isAdmin())
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -210,6 +212,8 @@
                                 <td>{{$item->title}}</td>
                                 <td>${{$item->price}}</td>
                                 <td>{{date('m/d/y',strtotime($item->created_at))}}</td>
+
+                                @if (Auth::user()->isAdmin())
                                 <td><a href="/admin/food-items/{{$item->id}}/edit"><i class="far fa-edit"></i></a></td>
                                 <td>
                                     <a onclick="if(!confirm('are you sure you want to delete this category')){return false;}"
@@ -217,6 +221,8 @@
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                @endif
+
                             </tr>
                             @endforeach
 

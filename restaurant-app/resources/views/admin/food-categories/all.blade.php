@@ -198,8 +198,10 @@
                                 <th scope="col">id</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Date Created </th>
+                                @if (Auth::user()->isAdmin())
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
+                                @endif
                             </tr>
                         </thead>
                         <tbody>
@@ -208,6 +210,8 @@
                                 <th scope="row">{{$category->id}}</th>
                                 <td>{{$category->title}}</td>
                                 <td>{{date('m/d/y',strtotime($category->created_at))}}</td>
+
+                                @if (Auth::user()->isAdmin())
                                 <td><a href="/admin/food-categories/{{$category->id}}/edit"><i
                                             class="far fa-edit"></i></a></td>
                                 <td>
@@ -216,6 +220,8 @@
                                         <i class="far fa-trash-alt"></i>
                                     </a>
                                 </td>
+                                @endif
+
                             </tr>
                             @endforeach
 
