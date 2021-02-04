@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\carbon;
-use Faker\factory as faker;
+use Faker\Factory as faker;
 class MemberSeeder extends Seeder
 {
     /**
