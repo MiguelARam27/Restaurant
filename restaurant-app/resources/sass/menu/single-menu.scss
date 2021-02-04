@@ -1,17 +1,14 @@
-// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700:900&display=swap");
-.single-menu-page {
+#single-menu-page {
     padding: 100px;
-
     h1 {
         font-size: 3rem;
-        font-weight: 500;
+        font-weight: 700;
         color: #ed4852;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
     .item {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
-
     .title {
         display: flex;
         width: 100%;
@@ -22,10 +19,29 @@
             font-size: 1.4rem;
             color: black;
             font-weight: 900;
-            margin-bottom: 1rem;
-        }
-        h4 {
-            font-family: "Roboto", sans-serif;
         }
     }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    #single-menu-page {
+        padding: 20px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    #single-menu-page {
+        padding: 20px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+    #single-menu-page {
+        padding: 20px;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

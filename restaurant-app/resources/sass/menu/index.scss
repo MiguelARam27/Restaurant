@@ -1,93 +1,50 @@
 .menu-page {
     padding: 100px;
-
     #food-preview {
         padding: 0;
         background: transparent;
         h2 {
             color: white;
             text-transform: uppercase;
-            font-size: 2.95rem;
         }
         .button-rounded {
             margin-bottom: 2rem;
         }
         .right-btn,
         .left-btn {
-            background-color: black;
+            background: black !important;
         }
         .food-slider {
-            width: 100%;
-            max-width: 1400px;
-            // display: flex;
-            // margin-bottom: 2rem;
-            overflow: hidden;
-            position: relative;
-            font-size: 0;
             .sliding-system {
-                white-space: nowrap;
-                transform: translate3d(-0%, 0, 0);
             }
             .slide {
-                width: 20%;
-                position: relative;
-                height: 500px;
-                cursor: pointer;
-                display: inline-block;
-                white-space: normal;
-                // border-right: 1px solid #e9f0f4;
                 &:hover {
                     .background {
                         background: black;
                         transform: translate3d(0, -200px, 0);
                     }
-                    .content {
-                        .food-title {
-                            color: white;
-                        }
-                        .food-description {
-                            color: white;
-                        }
-                    }
-                }
-                .background {
-                    background: white;
-                    top: 0;
-                    bottom: 0;
-                    height: 100%;
-                    width: 100%;
-                    z-index: 1;
-                    position: absolute;
-                    transition: transform 0.3s ease-in-out;
-                }
-                .content {
-                    position: absolute;
-                    z-index: 2;
-                    padding: 20px;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    .food-title {
-                        color: #ed4852;
-                        font-size: 2rem;
-                        font-weight: 900;
-                        margin-bottom: 3rem;
-                        // transition: all .3s ease-in-out;
-                    }
-                    .food-description {
-                        font-size: 0.8rem;
-                        font-weight: 400;
-                        line-height: 1.8;
-                        margin-bottom: 3rem;
-                        color: #7a8d99;
-                    }
-                }
-                img {
-                    width: 95%;
-                    max-width: 250px;
                 }
             }
         }
     }
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    #menu-page {
+        padding: 20px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    #menu-page {
+        padding: 20px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 }

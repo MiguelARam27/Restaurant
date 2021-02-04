@@ -3,7 +3,8 @@
 @section('content')
 <div class="single-menu-page">
     <div class="row">
-        <div class="offset-sm-12 offset-md-1 col-md-10
+        <div class="col-sm-12
+        offset-md-1 col-md-10
         offset-lg-2 col-lg-8">
             <div class="content-box">
                 <div class="row">
