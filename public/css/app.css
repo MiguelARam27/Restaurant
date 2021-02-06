@@ -11127,8 +11127,98 @@ table {
   position: relative;
 }
 
+.mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mobile-menu {
+    display: flex;
+    flex-flow: column;
+    color: white;
+    background-color: #ed4852;
+  }
+}
+
+.mobile-menu__logo {
+  align-items: flex-start;
+  position: relative;
+  margin: 0.2rem 0 0.2rem 0.2rem;
+}
+
+.mobile-menu__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 3rem;
+  width: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mobile-menu__links {
+    display: none;
+  }
+}
+
+.mobile-menu__links a {
+  all: initial;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.7rem 0.7rem;
+  background-color: #ed4852;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.mobile-menu__togglebutton {
+  display: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .mobile-menu__togglebutton {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 3rem;
+    height: 2.1rem;
+    display: flex;
+    top: 10%;
+    right: 4%;
+    transform: translate(-10%, -4%);
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.mobile-menu__togglebutton .bar {
+  height: 0.3rem;
+  width: 100%;
+  padding: 0.2rem 0;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.active {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.active-mobile {
+  top: 5%;
+  right: 5%;
+  transform: translate(5%, -5%);
+}
+
 .about-page {
   padding: 100px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about-page {
+    padding: 0.1rem 0.1rem;
+  }
 }
 
 .about-page h1 {
@@ -11147,6 +11237,12 @@ table {
 
 #contact-page {
   padding: 100px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  #contact-page {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 #contact-page h1 {
@@ -11190,6 +11286,12 @@ table {
   padding: 100px;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .waitlist-page {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
 .waitlist-page h1 {
   font-size: 3rem;
   font-weight: 400;
@@ -11225,6 +11327,12 @@ table {
 
 .offers-page {
   padding: 100px;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .offers-page {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 .offers-page h1 {
@@ -11304,30 +11412,36 @@ table {
   }
 }
 
-#single-menu-page {
+.menu-page {
   padding: 100px;
 }
 
-#single-menu-page h1 {
+@media only screen and (max-width: 37.5em) {
+  .menu-page {
+    padding: 0.5rem 0.5rem;
+  }
+}
+
+.menu-page h1 {
   font-size: 3rem;
   font-weight: 700;
   color: #ed4852;
   margin-bottom: 2rem;
 }
 
-#single-menu-page .item {
+.menu-page .item {
   margin-bottom: 2rem;
 }
 
-#single-menu-page .title {
+.menu-page .title {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 0.5rem;
 }
 
-#single-menu-page .title h4,
-#single-menu-page .title .price {
+.menu-page .title h4,
+.menu-page .title .price {
   font-size: 1.4rem;
   color: black;
   font-weight: 900;
@@ -11340,13 +11454,13 @@ table {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  #single-menu-page {
+  .single-menu-page {
     padding: 20px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  #single-menu-page {
+  .single-menu-page {
     padding: 20px;
   }
 }
@@ -11447,6 +11561,23 @@ body {
 
 #app-layout .side-menu .social-icons {
   display: flex;
+  justify-content: space-evenly;
+}
+
+#app-layout .side-menu .social-icons .facebook:hover {
+  background-color: #4267b2;
+}
+
+#app-layout .side-menu .social-icons .twitter:hover {
+  background-color: #1da1f2;
+}
+
+#app-layout .side-menu .social-icons .instagram:hover {
+  background-color: #405de6;
+}
+
+#app-layout .side-menu .social-icons .youtube:hover {
+  background-color: #ff0000;
 }
 
 #app-layout .side-menu .social-icons a {
@@ -11461,6 +11592,10 @@ body {
   width: 30px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+#app-layout .side-menu .social-icons a:hover {
+  transform: scale(1.03);
 }
 
 #app-layout .side-menu .location {

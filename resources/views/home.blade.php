@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+
 <section id="information">
     <div class="restaurant-image">
         <img src="img/landing.jpg">

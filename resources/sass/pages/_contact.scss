@@ -1,5 +1,8 @@
 #contact-page {
     padding: 100px;
+    @include respond(phone) {
+        padding: 0.5rem 0.5rem;
+    }
     h1 {
         font-size: 3rem;
         font-weight: 700;

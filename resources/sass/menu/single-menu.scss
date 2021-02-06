@@ -1,5 +1,8 @@
-#single-menu-page {
+.menu-page {
     padding: 100px;
+    @include respond(phone) {
+        padding: 0.5rem 0.5rem;
+    }
     h1 {
         font-size: 3rem;
         font-weight: 700;
@@ -30,14 +33,14 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
-    #single-menu-page {
+    .single-menu-page {
         padding: 20px;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199px) {
-    #single-menu-page {
+    .single-menu-page {
         padding: 20px;
     }
 }

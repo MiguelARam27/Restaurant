@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    @include('includes.mobile-menu')
     <section id="app-layout">
         @include('includes.side-menu')
         @if (session('status'))
@@ -36,5 +37,6 @@
 
 
 </body>
+<script src="/js/mobile-nav.js"></script>
 
 </html>

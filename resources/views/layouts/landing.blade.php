@@ -20,7 +20,9 @@
 </head>
 
 <body>
+    @include('includes.mobile-menu')
     <section id="app-layout">
+
         @include('includes.side-menu')
         <div class="welcome-jumbo">
 
@@ -30,5 +32,6 @@
     </section>
     @yield('content')
 </body>
+<script src="/js/mobile-nav.js"></script>
 
 </html>
