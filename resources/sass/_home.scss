@@ -1,6 +1,6 @@
 .welcome-jumbo {
     transform: translate3d(300px, 0, 0);
-    max-width: calc(100vw - 300px);
+    max-width: calc(100vw - 30rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,25 +41,13 @@
         font-weight: 900;
         align-self: flex-start;
         color: white;
-        margin-bottom: 100px;
+        margin-bottom: 10rem;
     }
     .burger-fries {
         width: 100%;
         // max-width: 1000px;
         // animation: moveUpandDown 1s linear infinite;
         position: relative;
-    }
-    // @keyframes moveUpandDown {
-    //   0%, 100%{
-    //     bottom:0;
-    //   }
-    //   50%{
-    //     bottom:30px;
-    //   }
-    // }
-}
-@media (min-width: 576px) {
-    .side-menu {
     }
 }
 

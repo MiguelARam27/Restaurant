@@ -89,8 +89,15 @@ Route::post('/admin/settings/seo','admin\SettingsController@saveSeo')->middlewar
 Route::get('/admin/settings/social','admin\SettingsController@social')->middleware('role:Admin,Employee');
 Route::post('/admin/settings/social','admin\SettingsController@saveSocial')->middleware('role:Admin,Employee');
 
+//file routes
+Route::view('/file-upload', 'upload');
+Route::post('/file-upload', 'GeneralController@store');
+Route::get('/view-uploads', 'GeneralController@viewUploads');
+
 Auth::routes();
 
+
+//index
 Route::get('/home', 'HomeController@index')->name('home');
 
 View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'menu/index', 'menu/single-menu','admin/dashboard'],function($view){

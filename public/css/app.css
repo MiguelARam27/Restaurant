@@ -11087,7 +11087,7 @@ table {
 
 .welcome-jumbo {
   transform: translate3d(300px, 0, 0);
-  max-width: calc(100vw - 300px);
+  max-width: calc(100vw - 30rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11119,7 +11119,7 @@ table {
   font-weight: 900;
   align-self: flex-start;
   color: white;
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 
 .welcome-jumbo .burger-fries {
@@ -11127,8 +11127,42 @@ table {
   position: relative;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 .mobile-menu {
   display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .mobile-menu {
+    display: flex;
+    flex-flow: column;
+    color: white;
+    background-color: #ed4852;
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  }
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11153,7 +11187,7 @@ table {
   width: 3rem;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 75em) {
   .mobile-menu__links {
     display: none;
   }
@@ -11173,6 +11207,22 @@ table {
 
 .mobile-menu__togglebutton {
   display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .mobile-menu__togglebutton {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 3rem;
+    height: 2.1rem;
+    display: flex;
+    top: 10%;
+    right: 4%;
+    transform: translate(-5%, -4%);
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11212,7 +11262,7 @@ table {
 }
 
 .about-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11236,7 +11286,7 @@ table {
 }
 
 #contact-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11283,7 +11333,7 @@ table {
 }
 
 .waitlist-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11307,9 +11357,9 @@ table {
 }
 
 .waitlist-page form .form-group .form-control {
-  padding: 10px;
-  border: 2px solid #9c1b24;
-  font-size: 1.3rem;
+  padding: 1rem;
+  border: 0.2rem solid #9c1b24;
+  font-size: 1.5rem;
   height: auto;
   box-sizing: border-box;
 }
@@ -11317,16 +11367,19 @@ table {
 .waitlist-page form .form-group label {
   font-weight: 700;
   margin-bottom: 0.6rem;
+  font-size: 1.3rem;
   color: black;
 }
 
 .waitlist-page form .form-group button[type=submit] {
+  padding: 0.5rem 0.4rem;
   background-color: #9c1b24;
   border: none;
+  font-size: 1.4rem;
 }
 
 .offers-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11354,26 +11407,29 @@ table {
 }
 
 .offers-page form .form-group .form-control {
-  padding: 10px;
-  border: 2px solid #9c1b24;
-  font-size: 1.3rem;
+  padding: 1rem;
+  border: 0.2rem solid #9c1b24;
+  font-size: 1.5rem;
   height: auto;
   box-sizing: border-box;
 }
 
 .offers-page form .form-group label {
   font-weight: 700;
+  font-size: 1.3rem;
   margin-bottom: 0.6rem;
   color: black;
 }
 
 .offers-page form .form-group button[type=submit] {
+  padding: 0.5rem 0.4rem;
   background-color: #9c1b24;
   border: none;
+  font-size: 1.4rem;
 }
 
 .menu-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 .menu-page #food-preview {
@@ -11413,7 +11469,7 @@ table {
 }
 
 .menu-page {
-  padding: 100px;
+  padding: 10rem;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -11449,19 +11505,19 @@ table {
 
 @media (min-width: 0px) and (max-width: 767px) {
   #single-menu-page {
-    padding: 20px;
+    padding: 2rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .single-menu-page {
-    padding: 20px;
+    padding: 2rem;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .single-menu-page {
-    padding: 20px;
+    padding: 2rem;
   }
 }
 
@@ -11516,37 +11572,37 @@ body {
 #app-layout .side-menu {
   position: absolute;
   background: white;
-  padding: 50px;
+  padding: 5rem;
   height: 100vh;
-  width: 300px;
+  width: 30rem;
 }
 
 #app-layout .side-menu .logo {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 #app-layout .side-menu .logo img {
-  max-width: 100px;
+  max-width: 10rem;
 }
 
 #app-layout .side-menu .menu {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 #app-layout .side-menu .menu .menu-title {
   text-transform: uppercase;
-  color: #0971ce;
+  color: #ed4852;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   border-bottom: 1px solid #e2eaef;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
 #app-layout .side-menu .menu .links li a {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: black;
   font-weight: 700;
   text-decoration: none;
@@ -11585,13 +11641,13 @@ body {
   justify-content: center;
   align-items: center;
   background: #c2c8cc;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: white;
-  height: 30px;
-  width: 30px;
+  height: 2.7rem;
+  width: 2.7rem;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.5rem;
 }
 
 #app-layout .side-menu .social-icons a:hover {
@@ -11601,12 +11657,12 @@ body {
 #app-layout .side-menu .location {
   align-self: center;
   position: absolute;
-  bottom: 100px;
+  bottom: 10rem;
 }
 
 #app-layout .side-menu .location .address {
   color: #7a8d99;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   line-height: 1.7;
 }
 
@@ -11619,7 +11675,7 @@ body {
 
 #app-layout #content-section {
   transform: translate3d(300px, 0, 0);
-  max-width: calc(100vw - 300px);
+  max-width: calc(100vw - 30rem);
   background: #ed4852;
   /* Old browsers */
   /* FF3.6-15 */
@@ -11636,7 +11692,8 @@ body {
 
 #information .restaurant-image {
   overflow: hidden;
-  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #information .restaurant-image img {
@@ -11644,7 +11701,7 @@ body {
 }
 
 #information .info {
-  padding: 100px 50px;
+  padding: 10rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11654,7 +11711,7 @@ body {
 #information .info .paragraphs {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-gap: 20px;
+  grid-gap: 2rem;
   line-height: 1.7;
   color: #525e66;
   font-size: 1.1rem;
@@ -11672,15 +11729,15 @@ body {
 }
 
 #information .info .about-link span {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 
 #information .info .about-link .circle-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background: #ed4852;
   /* Old browsers */
@@ -11697,7 +11754,7 @@ body {
 
 #food-preview {
   background: #f4f8fb;
-  padding: 100px;
+  padding: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11707,20 +11764,22 @@ body {
 #food-preview h2 {
   text-align: center;
   margin-bottom: 3rem;
+  font-size: 5rem;
+  text-transform: capitalize;
 }
 
 #food-preview .button-rounded {
   background: #ed4852;
   color: white;
   display: inline-block;
-  padding: 15px;
-  border-radius: 30px;
-  margin-bottom: 130px;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  margin-bottom: 10rem;
 }
 
 #food-preview .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 140rem;
   position: relative;
 }
 
@@ -11728,10 +11787,10 @@ body {
 #food-preview .container .right-btn {
   background: red;
   color: white;
-  height: 50px;
-  width: 50px;
+  height: 5rem;
+  width: 5rem;
   position: absolute;
-  top: calc(50% - 25px);
+  top: calc(50% - 2.5rem);
   display: inline-block;
   z-index: 5;
   display: flex;
@@ -11741,16 +11800,16 @@ body {
 }
 
 #food-preview .container .left-btn {
-  left: -35px;
+  left: -3.5rem;
 }
 
 #food-preview .container .right-btn {
-  right: -35px;
+  right: -3.5rem;
 }
 
 #food-preview .food-slider {
   width: 100%;
-  max-width: 1400px;
+  max-width: 140rem;
   overflow: hidden;
   position: relative;
   font-size: 0;
@@ -11765,7 +11824,7 @@ body {
 #food-preview .food-slider .slide {
   width: 20%;
   position: relative;
-  height: 500px;
+  height: 50rem;
   cursor: pointer;
   display: inline-block;
   white-space: normal;
@@ -11807,13 +11866,14 @@ body {
 
 #food-preview .food-slider .slide .content .food-title {
   color: #ed4852;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 3rem;
 }
 
 #food-preview .food-slider .slide .content .food-description {
-  font-size: 0.8rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.05rem;
   font-weight: 400;
   line-height: 1.8;
   margin-bottom: 3rem;
@@ -11822,7 +11882,7 @@ body {
 
 #food-preview .food-slider .slide img {
   width: 95%;
-  max-width: 250px;
+  max-width: 25rem;
 }
 
 h2 {

@@ -1,6 +1,30 @@
 .mobile-menu {
     display: none;
 
+    @include respond(tab-land) {
+        display: flex;
+        flex-flow: column;
+
+        color: white;
+        background-color: #ed4852;
+        background: -moz-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* FF3.6-15 */
+        background: -webkit-radial-gradient(
+            center,
+            ellipse cover,
+            #ed4852 0%,
+            #9c1b24 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(
+            ellipse at center,
+            #ed4852 0%,
+            #9c1b24 100%
+        );
+    }
     @include respond(phone) {
         display: flex;
         flex-flow: column;
@@ -23,11 +47,10 @@
     }
 
     &__links {
-        @include respond(phone) {
+        @include respond(tab-land) {
             display: none;
-
-            // transform: translate(5%, -20%);
         }
+
         a {
             all: initial;
             font-family: "Montserrat", sans-serif;
@@ -43,6 +66,20 @@
 
     &__togglebutton {
         display: none;
+
+        @include respond(tab-land) {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            width: 3rem;
+            height: 2.1rem;
+            display: flex;
+            top: 10%;
+            right: 4%;
+            transform: translate(-5%, -4%);
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
         @include respond(phone) {
             position: absolute;

@@ -49,6 +49,7 @@ return array(
     'App\\SeoSetting' => $baseDir . '/app/SeoSetting.php',
     'App\\SocialSetting' => $baseDir . '/app/SocialSetting.php',
     'App\\User' => $baseDir . '/app/User.php',
+    'App\\file' => $baseDir . '/app/file.php',
     'Asm89\\Stack\\Cors' => $vendorDir . '/asm89/stack-cors/src/Cors.php',
     'Asm89\\Stack\\CorsService' => $vendorDir . '/asm89/stack-cors/src/CorsService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

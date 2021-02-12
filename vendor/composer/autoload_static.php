@@ -544,6 +544,7 @@ class ComposerStaticInit4b06afce46ada8ad235394d1bba14965
         'App\\SeoSetting' => __DIR__ . '/../..' . '/app/SeoSetting.php',
         'App\\SocialSetting' => __DIR__ . '/../..' . '/app/SocialSetting.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\file' => __DIR__ . '/../..' . '/app/file.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',

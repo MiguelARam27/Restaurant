@@ -67,24 +67,24 @@ body {
     .side-menu {
         position: absolute;
         background: white;
-        padding: 50px;
+        padding: 5rem;
         height: 100vh;
-        width: 300px;
+        width: 30rem;
         .logo {
             display: flex;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 5rem;
             img {
-                max-width: 100px;
+                max-width: 10rem;
             }
         }
         .menu {
-            margin-bottom: 50px;
+            margin-bottom: 5rem;
             .menu-title {
                 text-transform: uppercase;
-                color: #0971ce;
+                color: #ed4852;
                 font-weight: 700;
-                font-size: 1.2rem;
+                font-size: 1.6rem;
                 border-bottom: 1px solid #e2eaef;
                 padding-bottom: 20px;
                 margin-bottom: 20px;
@@ -92,7 +92,7 @@ body {
             .links {
                 li {
                     a {
-                        font-size: 1.1rem;
+                        font-size: 1.5rem;
                         color: black;
                         font-weight: 700;
                         text-decoration: none;
@@ -108,6 +108,7 @@ body {
         }
         .social-icons {
             display: flex;
+
             justify-content: space-evenly;
 
             .facebook {
@@ -136,13 +137,13 @@ body {
                 justify-content: center;
                 align-items: center;
                 background: #c2c8cc;
-                font-size: 0.9rem;
+                font-size: 1.5rem;
                 text-decoration: none;
                 color: white;
-                height: 30px;
-                width: 30px;
+                height: 2.7rem;
+                width: 2.7rem;
                 border-radius: 50%;
-                margin-right: 10px;
+                margin-right: 0.5rem;
 
                 &:hover {
                     transform: scale(1.03);
@@ -152,10 +153,10 @@ body {
         .location {
             align-self: center;
             position: absolute;
-            bottom: 100px;
+            bottom: 10rem;
             .address {
                 color: #7a8d99;
-                margin-bottom: 20px;
+                margin-bottom: 2rem;
                 line-height: 1.7;
             }
             .phone-number {
@@ -170,7 +171,7 @@ body {
     }
     #content-section {
         transform: translate3d(300px, 0, 0);
-        max-width: calc(100vw - 300px);
+        max-width: calc(100vw - 30rem);
         background: #ed4852; /* Old browsers */
         background: -moz-radial-gradient(
             center,
@@ -198,7 +199,9 @@ body {
     grid-template-rows: 100vh;
     .restaurant-image {
         overflow: hidden;
-        height: 100%;
+
+        display: flex;
+        align-items: center;
         img {
             width: 100%;
             // height: 500px;
@@ -207,7 +210,7 @@ body {
         }
     }
     .info {
-        padding: 100px 50px;
+        padding: 10rem 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -216,7 +219,7 @@ body {
         .paragraphs {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-gap: 20px;
+            grid-gap: 2rem;
             line-height: 1.7;
             color: #525e66;
             font-size: 1.1rem;
@@ -231,14 +234,14 @@ body {
             color: black;
             font-weight: 700;
             span {
-                margin-right: 20px;
+                margin-right: 2rem;
             }
             .circle-right {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 40px;
-                width: 40px;
+                height: 4rem;
+                width: 4rem;
                 border-radius: 50%;
                 background: #ed4852; /* Old browsers */
                 background: -moz-radial-gradient(
@@ -268,7 +271,7 @@ body {
 }
 #food-preview {
     background: #f4f8fb;
-    padding: 100px;
+    padding: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,29 +279,31 @@ body {
     h2 {
         text-align: center;
         margin-bottom: 3rem;
+        font-size: 5rem;
+        text-transform: capitalize;
     }
     .button-rounded {
         background: #ed4852;
         color: white;
         display: inline-block;
-        padding: 15px;
-        border-radius: 30px;
-        margin-bottom: 130px;
+        padding: 1.5rem;
+        border-radius: 3rem;
+        margin-bottom: 10rem;
         //  width: 100px;
     }
     .container {
         width: 100%;
-        max-width: 1400px;
+        max-width: 140rem;
         position: relative;
 
         .left-btn,
         .right-btn {
             background: red;
             color: white;
-            height: 50px;
-            width: 50px;
+            height: 5rem;
+            width: 5rem;
             position: absolute;
-            top: calc(50% - 25px);
+            top: calc(50% - 2.5rem);
             display: inline-block;
             z-index: 5;
             display: flex;
@@ -307,15 +312,15 @@ body {
             cursor: pointer;
         }
         .left-btn {
-            left: -35px;
+            left: -3.5rem;
         }
         .right-btn {
-            right: -35px;
+            right: -3.5rem;
         }
     }
     .food-slider {
         width: 100%;
-        max-width: 1400px;
+        max-width: 140rem;
         // display: flex;
         // margin-bottom: 2rem;
         overflow: hidden;
@@ -329,7 +334,7 @@ body {
         .slide {
             width: 20%;
             position: relative;
-            height: 500px;
+            height: 50rem;
             cursor: pointer;
             display: inline-block;
             white-space: normal;
@@ -368,13 +373,14 @@ body {
                 align-items: center;
                 .food-title {
                     color: #ed4852;
-                    font-size: 2rem;
+                    font-size: 2.8rem;
                     font-weight: 900;
                     margin-bottom: 3rem;
                     // transition: all .3s ease-in-out;
                 }
                 .food-description {
-                    font-size: 0.8rem;
+                    font-size: 1.05rem;
+                    letter-spacing: 0.05rem;
                     font-weight: 400;
                     line-height: 1.8;
                     margin-bottom: 3rem;
@@ -383,7 +389,7 @@ body {
             }
             img {
                 width: 95%;
-                max-width: 250px;
+                max-width: 25rem;
             }
         }
     }
