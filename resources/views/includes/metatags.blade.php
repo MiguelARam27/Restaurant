@@ -4,12 +4,12 @@
 <title>{{$title}}</title>
 <meta name="description" content="{{$description}}">
 <meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large">
-{{-- <link rel="canonical" href="https://codingphase.com/"> --}}
+
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{$title}}">
 <meta property="og:description" content="{{$description}}">
-{{-- <meta property="og:url" content="https://codingphase.com/"> --}}
+
 <meta property="og:site_name" content="{{$title}}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{$title}}">

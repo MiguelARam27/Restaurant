@@ -11453,7 +11453,7 @@ html {
 
 .menu-page #food-preview .food-slider .slide:hover .background {
   background: black;
-  transform: translate3d(0, -200px, 0);
+  transform: translate3d(0, -20rem, 0);
 }
 
 @media (min-width: 0px) and (max-width: 767px) {

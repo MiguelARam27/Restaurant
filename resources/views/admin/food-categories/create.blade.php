@@ -34,7 +34,7 @@
             <div class="card">
                 <h5 class="card-header">Basic Form</h5>
                 <div class="card-body">
-                    <form id="basicform" method="POST" action="/admin/food-categories">
+                    <form id="basicform" method="POST" action="/admin/food-categories" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="inputCategory">Category Title</label>
@@ -64,12 +64,12 @@
                         </div>
                         <div class="form-group">
                             <label for="inputCategory">Category Image URL</label>
-                            <input id="inputTitle" type="text"
-                                class="form-control form-control-lg @error('image_url') is-invalid @enderror"
-                                name="image_url" value="{{ old('image_url') }}" required autocomplete="image_url"
-                                autofocus placeholder="Enter the URL of the image">
+                            <input id="inputTitle" type="file"
+                                class="form-control form-control-lg @error('image') is-invalid @enderror" name="image"
+                                value="{{ old('image') }}" required autocomplete="image" autofocus
+                                placeholder="Enter the URL of the image">
 
-                            @error('image_url')
+                            @error('image')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -86,6 +86,7 @@
                             </div>
                         </div>
                     </form>
+                    @include('components.errors')
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ class FoodCategory extends Model
     protected $table = 'food_categories';
 
     protected $fillable = [
-        'title','description', 'image_url'
+        'title','description', 'image'
     ];
     public function food_items(){
         return $this->hasMany('App\FoodItem', 'category_id');

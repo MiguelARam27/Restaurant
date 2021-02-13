@@ -24,13 +24,17 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['required', 'string'],
-            'category_id'=>['required','integer']
+            'image' => ['required', 'file'],
         ]);
+        
+        $category_image= request('image');
+        $product_image_name = $category_image->getClientOriginalName();
+        $category_image -> move('uploads/categories/', $product_image_name);
+
         $category = new FoodCategory();
         $category->title = request('title');
         $category->description = request('description');
-        $category->image_url = request('image_url');
+        $category->image = 'uploads/categories/' . $product_image_name;
     
         $category->save();
 
