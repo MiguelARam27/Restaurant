@@ -41,7 +41,7 @@
                             <input id="inputTitle" type="text"
                                 class="form-control form-control-lg @error('title') is-invalid @enderror" name="title"
                                 value="{{ old('title') }}" required autocomplete="title" autofocus
-                                placeholder="Categroy Title">
+                                placeholder="CategoryTitle">
 
                             @error('title')
                             <span class="invalid-feedback" role="alert">

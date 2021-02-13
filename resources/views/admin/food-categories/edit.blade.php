@@ -34,7 +34,7 @@
             <div class="card">
                 <h5 class="card-header">Basic Form</h5>
                 <div class="card-body">
-                    <form method="POST" action="/admin/food-categories/{{$category->id}}">
+                    <form method="POST" action="/admin/food-categories/{{$category->id}}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
@@ -65,10 +65,10 @@
                         </div>
                         <div class="form-group">
                             <label for="inputImageURL">Category Image URL</label>
-                            <input id="inputImageURL" type="text"
-                                class="form-control form-control-lg @error('image_url') is-invalid @enderror"
-                                name="image_url" value="{{ old('image_url', $category->image_url) }}" required
-                                autocomplete="image_url" placeholder="Url of image">
+                            <input id="inputImageURL" type="file"
+                                class="form-control form-control-lg @error('image') is-invalid @enderror" name="image"
+                                value="{{ old('image', $category->image) }}" required autocomplete="image"
+                                placeholder="Url of image">
 
                             @error('email')
                             <span class="invalid-feedback" role="alert">
@@ -76,50 +76,22 @@
                             </span>
                             @enderror
                         </div>
-                        {{-- <div class="form-group">
-                            <label for="inputpassword">Password</label>
-                            <input id="inputpassword" type="password"
-                                class="form-control form-control-lg @error('password') is-invalid @enderror"
-                                name="password" required autocomplete="new-password" placeholder="Password">
+                        <div class="row">
+                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
 
-                            @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
+                            </div>
+                            <div class="col-sm-6 pl-0">
+                                <p class="text-right">
+                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
+
+                                </p>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-
-                <div class="form-group">
-                    <label for="inputrole">Role</label>
-                    <select name="role_id" class="form-control" id="inputrole">
-                        @foreach ($roles as $role)
-                        <option value="{{$role->id}}" @if ($role->title == 'Employee')
-                            selected
-                            @endif
-                            >{{$role->title}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                --}}
-
-
-                <div class="row">
-                    <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
-
-                    </div>
-                    <div class="col-sm-6 pl-0">
-                        <p class="text-right">
-                            <button type="submit" class="btn btn-space btn-primary">Submit</button>
-
-                        </p>
-                    </div>
-                </div>
-                </form>
             </div>
         </div>
     </div>
-</div>
 
 </div>
 
