@@ -87,6 +87,13 @@
                         </div>
                     </form>
                     @include('components.errors')
+                    <!-- Alert message (start) -->
+                    @if(Session::has('message'))
+                    <div class="alert {{ Session::get('alert-class') }}">
+                        {{ Session::get('message') }}
+                    </div>
+                    @endif
+                    <!-- Alert message (end) -->
                 </div>
             </div>
         </div>

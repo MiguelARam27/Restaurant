@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\admin;
 use App\FoodCategory;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
-
+use Validator;
 class FoodCategoriesController extends Controller
 {
     public function __construct()
@@ -13,7 +14,9 @@ class FoodCategoriesController extends Controller
     }
     public function index(){
         $categories = FoodCategory::paginate(10); 
-        return view('admin/food-categories/all',['categories'=>$categories]);
+       
+
+        return view('admin/food-categories/all')->with('categories',$categories);
     }
     public function create(){
 
@@ -24,7 +27,7 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image' => ['required', 'file'],
+            'image' => ['required','mimes:jpg,bmp,png'],
         ]);
         
         $category_image= request('image');
@@ -38,8 +41,8 @@ class FoodCategoriesController extends Controller
     
         $category->save();
 
-       
-        return redirect('/admin/food-categories');
+        session()->flash('message', request('title') . '  Category Added');
+        return redirect('/admin/food-categories')->send('success','Category Created');
     }
     public function edit($id){
         $category = FoodCategory::find($id);
@@ -54,7 +57,7 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image' => ['required', 'file']
+            'image' => ['required','mimes:jpg,bmp,png'],
         ]);
 
         $category_image= request('image');
@@ -72,7 +75,11 @@ class FoodCategoriesController extends Controller
 
     public function delete($id){
         $category = FoodCategory::find($id);
+        $category_title =$category->title;
         $category->delete();
+
+
+        session()->flash('message', $category_title . '  Category Deleted');
         return redirect('/admin/food-categories');
     }
   

@@ -108,7 +108,7 @@ var chart = new Chartist.Line(
         fullWidth: true
     }
 );
-console.log("here");
+
 chart.on("draw", function(data) {
     if (data.type === "line" || data.type === "area") {
         data.element.animate({
@@ -194,8 +194,6 @@ $("#sparkline-revenue4").sparkline([6, 5, 3, 4, 2, 5, 3, 8, 6, 4, 5, 1], {
 // Total Revenue
 // ==============================================================
 $.get("/admin/rev", function(data) {
-    console.log(data);
-
     Morris.Area({
         element: "morris_totalrevenue",
         behaveLikeLine: true,
