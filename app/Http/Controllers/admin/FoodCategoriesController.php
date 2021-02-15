@@ -41,7 +41,7 @@ class FoodCategoriesController extends Controller
     
         $category->save();
 
-        session()->flash('message', request('title') . '  Category Added');
+        session()->flash('success', request('title') . '  Category Added');
         return redirect('/admin/food-categories')->send('success','Category Created');
     }
     public function edit($id){
@@ -57,20 +57,22 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image' => ['required','mimes:jpg,bmp,png'],
+            'image' => ['mimes:jpg,bmp,png'],
         ]);
-
-        $category_image= request('image');
-        $product_image_name = $category_image->getClientOriginalName();
-        $category_image -> move('uploads/categories/', $product_image_name);
-        
         $category = FoodCategory::find($id);
+        if(request('image')){
+            $category_image= request('image');
+            $product_image_name = $category_image->getClientOriginalName();
+            $category_image -> move('uploads/categories/', $product_image_name);
+            
+            $category->image = 'uploads/categories/' . $product_image_name;
+           
+        }
         $category->title = request('title');
         $category->description = request('description');
-        $category->image = 'uploads/categories/' . $product_image_name;
         $category->save();
-
-        return redirect('/admin/food-categories');
+        session()->flash('success', request('title') . '  Category Added');
+        return redirect('/admin/food-categories')->send('success','Category Created');
     }
 
     public function delete($id){
@@ -79,7 +81,7 @@ class FoodCategoriesController extends Controller
         $category->delete();
 
 
-        session()->flash('message', $category_title . '  Category Deleted');
+        session()->flash('danger', $category_title . '  Category Deleted');
         return redirect('/admin/food-categories');
     }
   

@@ -67,7 +67,7 @@
                             <label for="inputImageURL">Category Image URL</label>
                             <input id="inputImageURL" type="file"
                                 class="form-control form-control-lg @error('image') is-invalid @enderror" name="image"
-                                value="{{ old('image', $category->image) }}" required autocomplete="image"
+                                value="{{ old('image', $category->image) }}" autocomplete="image"
                                 placeholder="Url of image">
 
                             @error('email')

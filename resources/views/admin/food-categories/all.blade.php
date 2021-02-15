@@ -49,21 +49,18 @@
     <!-- end pageheader -->
     <!-- ============================================================== -->
     <div class="row">
-        <div class="container">
-
-            @if(!empty($success))
-
-            <h2> {{ $success }}</h2>
-            <button class=" delete" onclick="hideAlert()"></button>
-
+        <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            @if(session()->exists('success'))
+            <div id='message' class="alert alert-success message">
+                {{session('success')}}
+            </div>
             @endif
-            @if(session()->exists('message'))
-            <div class="alert alert-success">
-                {{session('message')}}
+            @if(session()->exists('danger'))
+            <div id='message' class="alert alert-danger message">
+                {{session('danger')}}
             </div>
             @endif
         </div>
-
     </div>
     <div class="row">
         <!-- ============================================================== -->
