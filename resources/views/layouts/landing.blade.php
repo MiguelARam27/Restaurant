@@ -26,12 +26,14 @@
         @include('includes.side-menu')
         <div class="welcome-jumbo">
 
-            <h1>{{$title}}</h1>
+            <h1 class="welcome-jumbo__title">{{$title}}</h1>
             <img src="/img/hamburger.png" class="burger-fries">
         </div>
     </section>
     @yield('content')
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="/js/animation.js"></script>
 <script src="/js/mobile-nav.js"></script>
 
 </html>

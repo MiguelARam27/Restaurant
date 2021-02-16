@@ -11086,8 +11086,8 @@ table {
 }
 
 .welcome-jumbo {
-  transform: translate3d(300px, 0, 0);
-  max-width: calc(100vw - 30rem);
+  transform: translate3d(30rem, 0, 0);
+  width: calc(100vw - 30rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11125,6 +11125,74 @@ table {
 .welcome-jumbo .burger-fries {
   width: 100%;
   position: relative;
+}
+
+#information {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 70vh;
+}
+
+#information .restaurant-image {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#information .restaurant-image img {
+  width: 100%;
+}
+
+#information .info {
+  padding: 10rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#information .info .paragraphs {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 2rem;
+  line-height: 1.7;
+  color: #525e66;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+#information .info .about-link {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+#information .info .about-link span {
+  margin-right: 2rem;
+}
+
+#information .info .about-link .circle-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: #ed4852;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#information .info .about-link .circle-right .fa-chevron-right {
+  color: white;
+  font-size: 1.3rem;
 }
 
 html {
@@ -11674,82 +11742,14 @@ body {
 }
 
 #app-layout #content-section {
-  transform: translate3d(300px, 0, 0);
-  max-width: calc(100vw - 30rem);
+  transform: translate3d(30rem, 0, 0);
+  width: calc(100vw - 30rem);
   background: #ed4852;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-#information {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
-}
-
-#information .restaurant-image {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-}
-
-#information .restaurant-image img {
-  width: 100%;
-}
-
-#information .info {
-  padding: 10rem 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#information .info .paragraphs {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 2rem;
-  line-height: 1.7;
-  color: #525e66;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-}
-
-#information .info .about-link {
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
-}
-
-#information .info .about-link span {
-  margin-right: 2rem;
-}
-
-#information .info .about-link .circle-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  background: #ed4852;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-#information .info .about-link .circle-right .fa-chevron-right {
-  color: white;
-  font-size: 1.3rem;
 }
 
 #food-preview {

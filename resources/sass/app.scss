@@ -170,8 +170,8 @@ body {
         }
     }
     #content-section {
-        transform: translate3d(300px, 0, 0);
-        max-width: calc(100vw - 30rem);
+        transform: translate3d(30rem, 0, 0);
+        width: calc(100vw - 30rem);
         background: #ed4852; /* Old browsers */
         background: -moz-radial-gradient(
             center,
@@ -193,82 +193,7 @@ body {
         // overflow: hidden;
     }
 }
-#information {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100vh;
-    .restaurant-image {
-        overflow: hidden;
 
-        display: flex;
-        align-items: center;
-        img {
-            width: 100%;
-            // height: 500px;
-            // object-fit: cover;
-            // object-position: 0 0;
-        }
-    }
-    .info {
-        padding: 10rem 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        .paragraphs {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-gap: 2rem;
-            line-height: 1.7;
-            color: #525e66;
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-        .about-link {
-            font-size: 1.8rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: black;
-            font-weight: 700;
-            span {
-                margin-right: 2rem;
-            }
-            .circle-right {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 4rem;
-                width: 4rem;
-                border-radius: 50%;
-                background: #ed4852; /* Old browsers */
-                background: -moz-radial-gradient(
-                    center,
-                    ellipse cover,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* FF3.6-15 */
-                background: -webkit-radial-gradient(
-                    center,
-                    ellipse cover,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* Chrome10-25,Safari5.1-6 */
-                background: radial-gradient(
-                    ellipse at center,
-                    #ed4852 0%,
-                    #9c1b24 100%
-                ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                .fa-chevron-right {
-                    color: white;
-                    font-size: 1.3rem;
-                }
-            }
-        }
-    }
-}
 #food-preview {
     background: #f4f8fb;
     padding: 10rem;
