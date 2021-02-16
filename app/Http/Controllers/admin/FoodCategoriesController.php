@@ -42,11 +42,12 @@ class FoodCategoriesController extends Controller
         $category->save();
 
         session()->flash('success', request('title') . '  Category Added');
-        return redirect('/admin/food-categories')->send('success','Category Created');
+        return redirect('/admin/food-categories');
     }
     public function edit($id){
         $category = FoodCategory::find($id);
         
+       
         return view('admin/food-categories/edit', [
             'category' => $category
         ]);
@@ -64,14 +65,13 @@ class FoodCategoriesController extends Controller
             $category_image= request('image');
             $product_image_name = $category_image->getClientOriginalName();
             $category_image -> move('uploads/categories/', $product_image_name);
-            
             $category->image = 'uploads/categories/' . $product_image_name;
            
         }
         $category->title = request('title');
         $category->description = request('description');
         $category->save();
-        session()->flash('success', request('title') . '  Category Added');
+        session()->flash('success', request('title') . ' is Updated');
         return redirect('/admin/food-categories')->send('success','Category Created');
     }
 

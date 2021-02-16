@@ -34,7 +34,7 @@
             <div class="card">
                 <h5 class="card-header">Basic Form</h5>
                 <div class="card-body">
-                    <form method="POST" action="/admin/food-items/{{$item->id}}">
+                    <form method="POST" action="/admin/food-items/{{$item->id}}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
@@ -76,10 +76,10 @@
                         </div>
                         <div class="form-group">
                             <label for="inputimageurl">Image Url</label>
-                            <input id="inputimageurl" type="text"
+                            <input id="inputimageurl" type="file"
                                 class="form-control form-control-lg @error('image_url') is-invalid @enderror"
-                                name="image_url" value="{{ old('image_url',$item->image_url) }}" autocomplete="title"
-                                autofocus placeholder="Add the url to the Item image">
+                                name="image_url" value="{{ old('image_url') }}" required autocomplete="title" autofocus
+                                placeholder="Add the url to the Item image">
 
                             @error('image_url')
                             <span class="invalid-feedback" role="alert">

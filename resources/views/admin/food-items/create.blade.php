@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div class="page-header">
-                <h2 class="pageheader-title">View Food Category</h2>
+                <h2 class="pageheader-title">New Food Item</h2>
                 <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet
                     vestibulum mi. Morbi lobortis pulvinar quam.</p>
                 <div class="page-breadcrumb">
@@ -34,7 +34,7 @@
             <div class="card">
                 <h5 class="card-header">Basic Form</h5>
                 <div class="card-body">
-                    <form method="POST" action="/admin/food-items">
+                    <form method="POST" action="/admin/food-items" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="inputtitle">Title</label>
@@ -72,9 +72,9 @@
                         </div>
                         <div class="form-group">
                             <label for="inputimageurl">Image Url</label>
-                            <input id="inputimageurl" type="text"
+                            <input id="inputimageurl" type="file"
                                 class="form-control form-control-lg @error('image_url') is-invalid @enderror"
-                                name="image_url" value="{{ old('image_url') }}" autocomplete="title" autofocus
+                                name="image_url" value="{{ old('image_url') }}" required autocomplete="title" autofocus
                                 placeholder="Add the url to the Item image">
 
                             @error('image_url')
@@ -83,35 +83,48 @@
                             </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="inputdescription">Description</label>
-                            <textarea id="inputdescription" type="text"
-                                class="form-control form-control-lg @error('description') is-invalid @enderror"
-                                name="description" required autofocus
-                                placeholder="Write a Description">{{ old('description') }}</textarea>
+                        {{-- <div class="form-group">
+                            <label for="inputCategory">Category Image URL</label>
+                            <input id="inputTitle" type="file"
+                                class="form-control form-control-lg @error('image') is-invalid @enderror" name="image"
+                                value="{{ old('image') }}" required autocomplete="image" autofocus
+                        placeholder="Enter the URL of the image">
 
-                            @error('description')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                            @enderror
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
+                        @error('image')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                </div> --}}
+                <div class="form-group">
+                    <label for="inputdescription">Description</label>
+                    <textarea id="inputdescription" type="text"
+                        class="form-control form-control-lg @error('description') is-invalid @enderror"
+                        name="description" required autofocus
+                        placeholder="Write a Description">{{ old('description') }}</textarea>
 
-                            </div>
-                            <div class="col-sm-6 pl-0">
-                                <p class="text-right">
-                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
-
-                                </p>
-                            </div>
-                        </div>
-                    </form>
+                    @error('description')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
                 </div>
+                <div class="row">
+                    <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
+
+                    </div>
+                    <div class="col-sm-6 pl-0">
+                        <p class="text-right">
+                            <button type="submit" class="btn btn-space btn-primary">Submit</button>
+
+                        </p>
+                    </div>
+                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 </div>
 

@@ -50,16 +50,7 @@
     <!-- ============================================================== -->
     <div class="row">
         <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-            @if(session()->exists('success'))
-            <div id='message' class="alert alert-success message">
-                {{session('success')}}
-            </div>
-            @endif
-            @if(session()->exists('danger'))
-            <div id='message' class="alert alert-danger message">
-                {{session('danger')}}
-            </div>
-            @endif
+            @include('includes.message')
         </div>
     </div>
     <div class="row">
