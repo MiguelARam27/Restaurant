@@ -30,18 +30,26 @@ topTimeline
         },
         ">-1"
     )
-    .fromTo(
-        ".burger-fries",
-        {
-            x: 200,
-            ease: "ease-in"
-        },
-        {
-            x: 0,
-            ease: "slow",
-            duration: 1
+    .staggerFrom(".burger-fries", 1.25, {
+        scale: 0,
+        ease: Elastic.easeOut,
+        stagger: {
+            from: "center",
+            amount: 0.25
         }
-    );
+    });
+// .fromTo(
+//     ".burger-fries",
+//     {
+//         x: 200,
+//         ease: "ease-in"
+//     },
+//     {
+//         x: 0,
+//         ease: "slow",
+//         duration: 1
+//     }
+// );
 
 navTimeLine
     .fromTo(
@@ -180,17 +188,6 @@ menuTimeLine
     });
 
 let PageController = new ScrollMagic.Controller();
-
-// let JumboController = new ScrollMagic.Scene({
-//     triggerElement: ".welcome-jumbo",
-//     triggerHook: 1,
-//     reverse: true,
-//     offset: 0,
-//     duration: 1
-// })
-//     .setTween(infoTimeLine)
-
-//     .addTo(PageController);
 
 let infoSection = document.getElementById("information");
 let infoController = new ScrollMagic.Scene({

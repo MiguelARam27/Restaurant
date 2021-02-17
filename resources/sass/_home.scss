@@ -37,14 +37,15 @@
         margin-bottom: 20px;
     }
     h1 {
-        font-size: 4rem;
+        font-size: 8rem;
         font-weight: 900;
         align-self: flex-start;
         color: white;
         margin-bottom: 10rem;
     }
     .burger-fries {
-        width: 100%;
+        width: 60%;
+        max-width: 100%;
         // max-width: 1000px;
         // animation: moveUpandDown 1s linear infinite;
         position: relative;

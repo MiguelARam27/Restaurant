@@ -5,6 +5,7 @@
         display: flex;
         flex-flow: column;
 
+        padding: 0.5rem 0.1rem;
         color: white;
         background-color: #ed4852;
         background: -moz-radial-gradient(
@@ -41,8 +42,8 @@
 
         img {
             object-fit: contain;
-            height: 3rem;
-            width: 3rem;
+            height: 5rem;
+            width: 5rem;
         }
     }
 
@@ -69,34 +70,32 @@
 
         @include respond(tab-land) {
             position: absolute;
-            top: 1rem;
-            right: 2rem;
+
             width: 3rem;
             height: 2.1rem;
             display: flex;
-            top: 10%;
+            top: 25%;
             right: 4%;
-            transform: translate(-5%, -4%);
+            transform: translate(-5%, -5%);
             flex-direction: column;
             justify-content: space-between;
         }
 
         @include respond(phone) {
             position: absolute;
-            top: 1rem;
-            right: 2rem;
+
             width: 3rem;
             height: 2.1rem;
             display: flex;
-            top: 10%;
+            top: 25%;
             right: 4%;
-            transform: translate(-10%, -4%);
+            transform: translate(-5%, -5%);
             flex-direction: column;
             justify-content: space-between;
         }
 
         .bar {
-            height: 0.3rem;
+            height: 0.45rem;
             width: 100%;
             padding: 0.2rem 0;
             background-color: white;

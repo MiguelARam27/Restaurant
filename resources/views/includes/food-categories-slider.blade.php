@@ -1,5 +1,5 @@
 <section id="food-preview">
-  <h2>We have everything you need to kill your hunger</h2>
+  <h2 class='food__preview__title'>We have everything you need to feed your Hunger</h2>
   <div class="container">
     <div class="left-btn">
       <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
 <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 <script>
   let slides = $('.sliding-system a.slide').length;
-    console.log(slides)
+    
     let maxSlides;
     let moveTotal;
     let currentSlide = 0;
@@ -93,7 +93,7 @@
       }
     }
     var b = window.matchMedia("(min-width: 768px) and (max-width: 997px");
-    console.log(b)
+  
     tabletSlider(b);
     b.addListener(tabletSlider);
 

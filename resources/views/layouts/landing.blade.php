@@ -24,19 +24,15 @@
     <section id="app-layout">
 
         @include('includes.side-menu')
-        <div class="welcome-jumbo">
+        <div class="welcome-jumbo" id='welcome-jumbo'>
 
             <h1 class="welcome-jumbo__title">{{$title}}</h1>
-            <img src="/img/hamburger.png" class="burger-fries">
+            <img src="/img/hamburger-meal.png" class="burger-fries">
         </div>
     </section>
     @yield('content')
 </body>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> --}}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>

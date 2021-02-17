@@ -11115,7 +11115,7 @@ table {
 }
 
 .welcome-jumbo h1 {
-  font-size: 4rem;
+  font-size: 8rem;
   font-weight: 900;
   align-self: flex-start;
   color: white;
@@ -11123,7 +11123,8 @@ table {
 }
 
 .welcome-jumbo .burger-fries {
-  width: 100%;
+  width: 60%;
+  max-width: 100%;
   position: relative;
 }
 
@@ -11225,6 +11226,7 @@ html {
   .mobile-menu {
     display: flex;
     flex-flow: column;
+    padding: 0.5rem 0.1rem;
     color: white;
     background-color: #ed4852;
     /* FF3.6-15 */
@@ -11251,8 +11253,8 @@ html {
 .mobile-menu__logo img {
   -o-object-fit: contain;
      object-fit: contain;
-  height: 3rem;
-  width: 3rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 @media only screen and (max-width: 75em) {
@@ -11280,14 +11282,12 @@ html {
 @media only screen and (max-width: 75em) {
   .mobile-menu__togglebutton {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
     width: 3rem;
     height: 2.1rem;
     display: flex;
-    top: 10%;
+    top: 25%;
     right: 4%;
-    transform: translate(-5%, -4%);
+    transform: translate(-5%, -5%);
     flex-direction: column;
     justify-content: space-between;
   }
@@ -11296,21 +11296,19 @@ html {
 @media only screen and (max-width: 37.5em) {
   .mobile-menu__togglebutton {
     position: absolute;
-    top: 1rem;
-    right: 2rem;
     width: 3rem;
     height: 2.1rem;
     display: flex;
-    top: 10%;
+    top: 25%;
     right: 4%;
-    transform: translate(-10%, -4%);
+    transform: translate(-5%, -5%);
     flex-direction: column;
     justify-content: space-between;
   }
 }
 
 .mobile-menu__togglebutton .bar {
-  height: 0.3rem;
+  height: 0.45rem;
   width: 100%;
   padding: 0.2rem 0;
   background-color: white;
@@ -11763,8 +11761,8 @@ body {
 
 #food-preview h2 {
   text-align: center;
-  margin-bottom: 3rem;
-  font-size: 5rem;
+  margin-bottom: 4rem;
+  font-size: 4.2rem;
   text-transform: capitalize;
 }
 
