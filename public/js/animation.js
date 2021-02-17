@@ -1,5 +1,7 @@
 let topTimeline = gsap.timeline({ paused: true });
 let navTimeLine = gsap.timeline({ paused: true });
+let infoTimeLine = gsap.timeline();
+let menuTimeLine = gsap.timeline();
 
 topTimeline
     .fromTo(
@@ -80,8 +82,133 @@ navTimeLine
             duration: 1,
             stagger: 0.1
         }
+    )
+    .fromTo(
+        ".social-icons a",
+        {
+            x: 400,
+            ease: "ease-in"
+        },
+        {
+            x: 0,
+            ease: "slow",
+            duration: 1
+        },
+        "-=1"
     );
 
+infoTimeLine
+    .fromTo(
+        ".restaurant-image img",
+        {
+            opacity: 0,
+            x: -200,
+            ease: "ease-in"
+        },
+        {
+            opacity: 1,
+            x: 0,
+            ease: "slow",
+            duration: 1
+        }
+    )
+    .fromTo(
+        ".paragraphs p",
+        {
+            x: 400,
+            ease: "ease-in"
+        },
+        {
+            x: 0,
+            ease: "slow",
+            duration: 1,
+            stagger: 0.1
+        },
+        "-=1"
+    )
+    .fromTo(
+        ".info h2",
+        {
+            x: 400,
+            ease: "ease-in"
+        },
+        {
+            x: 0,
+            ease: "slow",
+            duration: 1,
+            stagger: 0.1
+        },
+        "-=1"
+    )
+    .fromTo(
+        ".about-link",
+        {
+            opacity: 0,
+            ease: "ease-in"
+        },
+        {
+            opacity: 1,
+            ease: "eas-in",
+            duration: 0.5
+        },
+        "-=1"
+    );
+
+menuTimeLine
+    .fromTo(
+        "#food-preview",
+        {
+            opacity: 0,
+            ease: "ease-in"
+        },
+        {
+            opacity: 1,
+            ease: "eas-in",
+            duration: 0.25
+        }
+    )
+    .staggerFrom(".slide", 1.25, {
+        scale: 0,
+        cycle: {
+            y: [-50, 50]
+        },
+        ease: Elastic.easeOut,
+        stagger: {
+            from: "center",
+            amount: 0.25
+        }
+    });
+
+let PageController = new ScrollMagic.Controller();
+
+// let JumboController = new ScrollMagic.Scene({
+//     triggerElement: ".welcome-jumbo",
+//     triggerHook: 1,
+//     reverse: true,
+//     offset: 0,
+//     duration: 1
+// })
+//     .setTween(infoTimeLine)
+
+//     .addTo(PageController);
+
+let infoSection = document.getElementById("information");
+let infoController = new ScrollMagic.Scene({
+    triggerElement: infoSection,
+    triggerHook: 0,
+    offset: -0.65 * infoSection.offsetHeight
+})
+    .setTween(infoTimeLine)
+    .addTo(PageController);
+
+let menuSection = document.getElementById("food-preview");
+let menuController = new ScrollMagic.Scene({
+    triggerElement: menuSection,
+    triggerHook: 0,
+    offset: -0.45 * menuSection.offsetHeight
+})
+    .setTween(menuTimeLine)
+    .addTo(PageController);
 setTimeout(() => {
     topTimeline.play();
     navTimeLine.play();

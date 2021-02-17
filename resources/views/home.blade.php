@@ -42,8 +42,8 @@
                 et
                 similique!</p>
         </div>
-        <a href="#" class="about-link">
-            <span>Learn more about restaurants</span>
+        <a href="/about" class="about-link">
+            <span>Learn more about us</span>
             <div class="circle-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
         </a>
     </div>
