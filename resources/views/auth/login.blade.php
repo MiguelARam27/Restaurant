@@ -45,7 +45,8 @@
                         <label for="email"> Enter your Email</label>
                         <input id="email" type="email"
                             class="form-control form-control-lg @error('email') is-invalid @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="off" autofocus placeholder="email">
+                            value="{{ old('email') }}" required autocomplete="off" autofocus
+                            placeholder='Enter Your Email'>
 
                         @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -57,7 +58,7 @@
                         <label for="password"> Enter your Password</label>
                         <input id="password" type="password"
                             class="form-control form-control-lg @error('password') is-invalid @enderror"
-                            placeholder='enter password' name="password" required autocomplete="current-password">
+                            placeholder='Enter Your Password' name="password" required autocomplete="current-password">
 
                         @error('password')
                         <span class="invalid-feedback" role="alert">
@@ -79,9 +80,9 @@
             </div>
             <div class="card-footer bg-white p-0  ">
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Create An Account</a></div>
+                    <a href="/register" class="footer-link">Create An Account</a></div>
                 <div class="card-footer-item card-footer-item-bordered">
-                    <a class="footer-link" href="{{ route('password.request') }}">
+                    <a class="footer-link" href='/reset'>
                         Forgot Password
                     </a>
                     @if (Route::has('password.request'))

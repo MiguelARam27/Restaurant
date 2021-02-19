@@ -76,7 +76,7 @@
                         <tbody>
                             @foreach ($items as $item)
                             <tr>
-                                <th scope="row">{{$item->categories->title}}</th>
+                                <th scope="row">{{$item->title}}</th>
                                 <td>{{$item->title}}</td>
                                 <td>${{$item->price}}</td>
                                 <td>{{date('m/d/y',strtotime($item->created_at))}}</td>
